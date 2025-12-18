@@ -3,10 +3,10 @@ import { Facebook, Instagram, Linkedin } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="bg-black mt-20 text-white py-12">
+    <footer className="bg-linear-to-bl from-black to-slate-700 text-white py-12">
       <div className="max-w-4xl mx-auto text-center px-6">
         {/* Header */}
-        <h2 className="text-3xl font-bold mb-4">Let's Build Something Amazing</h2>
+        <h2 className="text-2xl md:text-3xl font-bold mb-4">Let's Build Something Amazing</h2>
 
         {/* Description */}
         <p className="mb-6 text-gray-300">

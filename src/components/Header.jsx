@@ -22,7 +22,7 @@ const Header = () => {
   });
 
   return (
-    <section className="min-h-screen bg-linear-to-br mt-16 md:mt-0 from-black via-gray-900 to-black text-white flex items-center relative overflow-hidden">
+    <section className="min-h-screen mt-16 md:mt-0 bg-linear-to-br from-[#0f172a] via-[#020617] to-[#020617] text-white flex items-center relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
 
         {/* LEFT CONTENT */}

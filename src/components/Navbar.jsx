@@ -22,7 +22,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`w-full top-0 left-0 z-50 transition-all duration-300 ${isScrolled ? "fixed bg-black shadow-lg" : "absolute bg-black"
+      className={`w-full top-0 left-0 z-50 transition-all duration-300 px-0 md:px-24 ${isScrolled ? "fixed bg-black shadow-lg" : "absolute bg-black"
         }`}
     >
       <div className="max-w-7xl mx-auto flex justify-between items-center p-4 text-white">
@@ -33,15 +33,32 @@ const Navbar = () => {
 
         {/* Right Side */}
         <div className="flex gap-6 text-lg">
-          <NavLink to="/" className="hover:text-gray-400 text-sm md:text-base transition-colors">
+          <NavLink
+            to="/"
+            className={({ isActive }) =>
+              `relative text-sm md:text-base transition-colors duration-300
+     ${isActive ? "text-indigo-500 font-semibold" : "text-white hover:text-gray-400"}
+     after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0
+     after:bg-indigo-500 after:transition-all after:duration-300
+     hover:after:w-full`
+            }
+          >
             Home
           </NavLink>
+
           <NavLink
             to="/my-projects"
-            className="hover:text-gray-400 text-sm md:text-base transition-colors"
+            className={({ isActive }) =>
+              `relative text-sm md:text-base transition-colors duration-300
+     ${isActive ? "text-indigo-500 font-semibold" : "text-white hover:text-gray-400"}
+     after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0
+     after:bg-indigo-500 after:transition-all after:duration-300
+     hover:after:w-full`
+            }
           >
             My Projects
           </NavLink>
+
         </div>
       </div>
     </nav>
