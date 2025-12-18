@@ -22,7 +22,7 @@ const Header = () => {
   });
 
   return (
-    <section className="min-h-screen bg-linear-to-br from-black via-gray-900 to-black text-white flex items-center relative overflow-hidden">
+    <section className="min-h-screen bg-linear-to-br mt-16 md:mt-0 from-black via-gray-900 to-black text-white flex items-center relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
 
         {/* LEFT CONTENT */}
@@ -64,7 +64,7 @@ const Header = () => {
 
           {/* Floating Tech Icons */}
           <motion.div
-            className="absolute top-0 left-10 text-cyan-400 text-4xl"
+            className="absolute top-0 left-10 md:left-16 text-cyan-400 text-4xl"
             animate={{ y: [0, -20, 0] }}
             transition={{ repeat: Infinity, duration: 3 }}
           >
@@ -72,7 +72,7 @@ const Header = () => {
           </motion.div>
 
           <motion.div
-            className="absolute top-20 right-10 text-yellow-400 text-4xl"
+            className="absolute -top-5 md:top-5 right-10 md:right-20 text-yellow-400 text-4xl"
             animate={{ y: [0, 20, 0] }}
             transition={{ repeat: Infinity, duration: 4 }}
           >
@@ -80,7 +80,7 @@ const Header = () => {
           </motion.div>
 
           <motion.div
-            className="absolute bottom-10 left-0 text-green-500 text-4xl"
+            className="absolute bottom-2 left-0 md:left-10 text-green-500 text-4xl"
             animate={{ x: [0, 20, 0] }}
             transition={{ repeat: Infinity, duration: 3 }}
           >
@@ -88,7 +88,7 @@ const Header = () => {
           </motion.div>
 
           <motion.div
-            className="absolute bottom-0 right-20 text-gray-300 text-4xl"
+            className="absolute bottom-0 right-2 md:right-20 text-gray-300 text-4xl"
             animate={{ x: [0, -20, 0] }}
             transition={{ repeat: Infinity, duration: 3.5 }}
           >
@@ -96,16 +96,16 @@ const Header = () => {
           </motion.div>
 
           <motion.div
-            className="absolute top-1/2 left-0 text-orange-400 text-4xl"
-            animate={{ y: [0, -15, 0] }}
+            className="absolute top-1/2 -left-2 md:left-0 text-orange-400 text-4xl"
+            animate={{ y: [0, -20, 0] }}
             transition={{ repeat: Infinity, duration: 4 }}
           >
             <SiFirebase />
           </motion.div>
 
           <motion.div
-            className="absolute top-1/2 right-0 text-green-400 text-4xl"
-            animate={{ y: [0, 15, 0] }}
+            className="absolute top-1/2 -right-2 md:right-4 text-green-400 text-4xl"
+            animate={{ y: [0, 20, 0] }}
             transition={{ repeat: Infinity, duration: 4 }}
           >
             <SiMongodb />
