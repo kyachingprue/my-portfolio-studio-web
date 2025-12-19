@@ -22,7 +22,8 @@ const Header = () => {
   });
 
   return (
-    <section className="min-h-screen mt-16 md:mt-0 bg-linear-to-br from-[#0f172a] via-[#020617] to-[#020617] text-white flex items-center relative overflow-hidden">
+    <section className="min-h-screen mt-16 md:mt-0 bg-linear-to-br from-slate-950 via-indigo-950 to-purple-950
+ text-white flex items-center relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
 
         {/* LEFT CONTENT */}
@@ -54,7 +55,7 @@ const Header = () => {
         <div className="relative flex justify-center">
           {/* Profile Image */}
           <motion.img
-            src="https://i.ibb.co.com/1Ysmc3Hf/new-generate-image.png" 
+            src="https://i.ibb.co.com/xSyPdjQZ/new-generate-image-1.png" 
             alt="Kyachingprue Marma"
             className="w-64 h-64 md:w-80 md:h-80 rounded-full object-cover border-4 border-gray-700 z-10"
             initial={{ scale: 0.9 }}

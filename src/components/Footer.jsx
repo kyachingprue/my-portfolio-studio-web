@@ -3,7 +3,7 @@ import { Facebook, Instagram, Linkedin } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="bg-linear-to-bl from-black to-slate-700 text-white py-12">
+    <footer className="bg-linear-to-bl from-black via-purple-950 to-black text-white py-12">
       <div className="max-w-4xl mx-auto text-center px-6">
         {/* Header */}
         <h2 className="text-2xl md:text-3xl font-bold mb-4">Let's Build Something Amazing</h2>
@@ -25,7 +25,7 @@ const Footer = () => {
         {/* Social Links */}
         <div className="flex justify-center gap-6 mb-6">
           <a
-            href="https://facebook.com"
+            href="https://www.facebook.com/kyaching.prue.marma.2025"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-gray-400 transition-colors"
@@ -33,7 +33,7 @@ const Footer = () => {
             <Facebook size={28} />
           </a>
           <a
-            href="https://instagram.com"
+            href="https://www.instagram.com/kyachingpruemarma?igsh=MTdjNDhybmVrNnh4aQ=="
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-gray-400 transition-colors"
