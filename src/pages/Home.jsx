@@ -1,3 +1,4 @@
+import AdvancedHomeFeature from "../components/AdvancedHomeFeature";
 import ContactMe from "../components/ContactMe";
 import Experience from "../components/Experience";
 import Header from "../components/Header";
@@ -9,7 +10,8 @@ const Home = () => {
       <Header />
       <TechnologyCards />
       <ContactMe />
-      <Experience/>
+      <Experience />
+      <AdvancedHomeFeature/>
     </div>
   );
 };
