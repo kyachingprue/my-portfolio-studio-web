@@ -3,7 +3,7 @@ import { ArrowRight, Code, Database, Server } from "lucide-react";
 
 const Banner = () => {
   return (
-    <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-linear-to-br from-[#0f172a] via-[#020617] to-[#020617] text-white">
+    <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-linear-to-br from-[#0f172a] via-[#020617] to-[#020617] text-white mt-16 md:mt-8">
 
       {/* Background Glow Effects */}
       <div className="absolute -top-32 -left-32 w-125 h-125 bg-indigo-600/30 rounded-full blur-[150px]" />
@@ -17,7 +17,7 @@ const Banner = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <span className="inline-flex items-center gap-2 px-4 py-1 mb-4 rounded-full bg-white/10 text-sm backdrop-blur">
+          <span className="inline-flex items-center gap-2 px-4 py-1 mb-4 rounded-full bg-white/10 text-sm backdrop-blur mt-10 md:mt-0">
             <Code size={16} /> MERN Stack Web Developer
           </span>
 

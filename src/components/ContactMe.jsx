@@ -100,14 +100,14 @@ export default function ContactMe() {
               </a>
             </div> */}
 
-            <div className="flex items-center gap-3">
+            <div className="flex row items-center gap-3">
               <Facebook className="text-indigo-400" />
               <a
                 href="https://www.facebook.com/kyaching.prue.marma.2025"
                 target="_blank"
                 className="hover:text-indigo-400 transition"
               >
-                https://www.facebook.com/kyaching.prue.marma.2025
+                https://www.facebook.com/kyachingprue
               </a>
             </div>
           </div>

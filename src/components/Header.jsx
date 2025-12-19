@@ -28,7 +28,7 @@ const Header = () => {
 
         {/* LEFT CONTENT */}
         <div>
-          <h1 className="text-2xl md:text-4xl font-bold mb-4 bg-linear-to-r from-green-400 via-cyan-400 to-blue-500 bg-clip-text text-transparent">
+          <h1 className="text-2xl mt-12 md:mt-0 md:text-4xl font-bold mb-4 bg-linear-to-r from-green-400 via-cyan-400 to-blue-500 bg-clip-text text-transparent">
             MERN Stack Developer
           </h1>
 

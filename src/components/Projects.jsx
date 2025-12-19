@@ -84,7 +84,7 @@ export default function Projects() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold">
+          <h2 className="text-3xl md:text-5xl font-bold">
             My <span className="text-emerald-400">Projects</span>
           </h2>
           <p className="mt-4 text-gray-400 max-w-2xl mx-auto">
