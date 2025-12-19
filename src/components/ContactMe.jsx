@@ -89,7 +89,7 @@ export default function ContactMe() {
               </a>
             </div>
 
-            <div className="flex items-center gap-3">
+            {/* <div className="flex items-center gap-3">
               <Linkedin className="text-indigo-400" />
               <a
                 href="https://linkedin.com/in/yourprofile"
@@ -98,7 +98,7 @@ export default function ContactMe() {
               >
                 linkedin.com/in/yourprofile
               </a>
-            </div>
+            </div> */}
 
             <div className="flex items-center gap-3">
               <Facebook className="text-indigo-400" />
@@ -113,7 +113,7 @@ export default function ContactMe() {
           </div>
         </motion.div>
 
-  
+        {/* RIGHT SIDE – ADVANCED DYNAMIC LOGIC */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
