@@ -1,5 +1,6 @@
 import { motion } from "motion/react";
 import { ArrowRight, Code, Database, Server } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Banner = () => {
   return (
@@ -37,13 +38,13 @@ const Banner = () => {
 
           {/* BUTTONS */}
           <div className="mt-8 flex flex-wrap gap-4">
-            <a
-              href="/projects"
+            <Link
+              to="/projects"
               className="group inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-linear-to-r from-indigo-500 to-cyan-500 text-white font-semibold shadow-lg hover:scale-105 transition"
             >
               View Projects
               <ArrowRight className="group-hover:translate-x-1 transition" />
-            </a>
+            </Link>
 
             <a
               href="#contact"
