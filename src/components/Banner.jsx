@@ -38,7 +38,7 @@ const Banner = () => {
           {/* BUTTONS */}
           <div className="mt-8 flex flex-wrap gap-4">
             <a
-              href="#projects"
+              href="/projects"
               className="group inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-linear-to-r from-indigo-500 to-cyan-500 text-white font-semibold shadow-lg hover:scale-105 transition"
             >
               View Projects

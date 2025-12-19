@@ -3,6 +3,7 @@ import MainLayout from "../layout/MainLayout";
 import ErrorPage from "../pages/ErrorPage";
 import Home from "../pages/Home";
 import MyProject from "../pages/MyProject";
+import Projects from "../components/Projects";
 
 const router = createBrowserRouter([
   {
@@ -17,6 +18,10 @@ const router = createBrowserRouter([
       {
         path: 'my-projects',
         element: <MyProject/>
+      },
+      {
+        path: 'projects',
+        element: <Projects/>
       }
     ]
   }
