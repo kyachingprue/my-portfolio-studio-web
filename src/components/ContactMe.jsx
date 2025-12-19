@@ -81,11 +81,11 @@ export default function ContactMe() {
             <div className="flex items-center gap-3">
               <Github className="text-indigo-400" />
               <a
-                href="https://github.com/yourusername"
+                href="https://github.com/kyachingprue?tab=repositories"
                 target="_blank"
                 className="hover:text-indigo-400 transition"
               >
-                github.com/yourusername
+                https://github.com/kyachingprue?tab=repositories
               </a>
             </div>
 

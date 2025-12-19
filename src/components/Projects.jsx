@@ -13,9 +13,9 @@ const projects = [
     category: "MERN E-Commerce Platform",
     description:
       "A full-featured MERN stack e-commerce platform with secure payments, authentication, admin dashboard, real-time data fetching, and modern UI animations.",
-    image: "https://via.placeholder.com/600x400?text=GreenBasket",
+    image: "https://i.ibb.co.com/DPjXFCn7/1-VMVKGNTxc7l-VEgce5uxd-Q.jpg",
     live: "https://analytics-chemical-auth.web.app/",
-    github: "https://github.com/yourusername/greenbasket",
+    github: "https://github.com/kyachingprue/my-ecommerce-client",
     tech: [
       "React",
       "Tailwind CSS",
@@ -35,9 +35,9 @@ const projects = [
     category: "Programming Course Platform",
     description:
       "An online programming course platform with authentication, structured courses, and interactive UI. Video streaming is limited due to low-range Render server constraints.",
-    image: "https://via.placeholder.com/600x400?text=CodeTrail",
+    image: "https://i.ibb.co.com/prNgz6PY/1673755852454.jpg",
     live: "https://school-mate-auth.web.app/",
-    github: "https://github.com/yourusername/codetrail",
+    github: "https://github.com/kyachingprue/code-trail-frontend",
     tech: [
       "React",
       "Tailwind CSS",
@@ -56,9 +56,9 @@ const projects = [
     category: "Travel & Booking Platform",
     description:
       "A modern travel booking website with secure Stripe payments, dynamic tour listings, performance-optimized UI, and responsive design for global travelers.",
-    image: "https://via.placeholder.com/600x400?text=World+Travel",
+    image: "https://i.ibb.co.com/bYT4bsJ/travel-image.png",
     live: "https://travel-project-frontend-rho.vercel.app/",
-    github: "https://github.com/yourusername/world-travel",
+    github: "https://github.com/kyachingprue/travel-project-frontend",
     tech: [
       "React",
       "Tailwind CSS",
@@ -107,11 +107,11 @@ export default function Projects() {
               <img
                 src={project.image}
                 alt={project.name}
-                className="w-full h-48 object-cover"
+                className="w-full h-56 p-2 md:p-4 lg:p5 object-cover"
               />
 
               {/* Content */}
-              <div className="p-6 space-y-4">
+              <div className="p-4 space-y-4">
                 <div>
                   <h3 className="text-2xl font-semibold">
                     {project.name}
