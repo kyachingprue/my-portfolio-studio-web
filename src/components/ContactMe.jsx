@@ -103,17 +103,17 @@ export default function ContactMe() {
             <div className="flex items-center gap-3">
               <Facebook className="text-indigo-400" />
               <a
-                href="https://facebook.com/yourprofile"
+                href="https://www.facebook.com/kyaching.prue.marma.2025"
                 target="_blank"
                 className="hover:text-indigo-400 transition"
               >
-                facebook.com/yourprofile
+                https://www.facebook.com/kyaching.prue.marma.2025
               </a>
             </div>
           </div>
         </motion.div>
 
-        {/* RIGHT SIDE – ADVANCED DYNAMIC LOGIC */}
+  
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
