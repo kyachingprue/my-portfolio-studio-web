@@ -27,12 +27,17 @@ const Navbar = () => {
     >
       <div className="max-w-7xl mx-auto flex justify-between items-center p-4 text-white">
         {/* Left Side */}
-        <div className="text-2xl font-bold">
-          <Link to="/">Portfolio</Link>
+        <div className="text-3xl font-bold">
+          <Link
+            to="/"
+            className="bg-clip-text text-transparent bg-linear-to-r from-indigo-400 via-cyan-400 to-purple-400 animate-gradient-x"
+          >
+            Portfolio
+          </Link>
         </div>
 
         {/* Right Side */}
-        <div className="flex gap-6 text-lg">
+        <div className="flex gap-3 md:gap-6 text-lg">
           <NavLink
             to="/"
             className={({ isActive }) =>
@@ -70,7 +75,6 @@ const Navbar = () => {
           >
             Contact
           </NavLink>
-
         </div>
       </div>
     </nav>
