@@ -90,7 +90,7 @@ export default function Contact() {
                 icon={<Facebook />}
                 link="https://www.facebook.com/kyaching.prue.marma.2025"
               />
-              <Social icon={<Linkedin />} link="#" />
+              <Social icon={<Linkedin />} link="https://www.linkedin.com/in/kyachingpruemarma/" />
             </div>
 
             <div className="pt-4">
