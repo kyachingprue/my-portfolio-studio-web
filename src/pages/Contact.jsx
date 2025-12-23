@@ -14,6 +14,8 @@ import {
 } from "lucide-react";
 import { useEffect, useState } from "react";
 import ExtraFeature from "../components/ExtraFeature";
+import ScientistNetwork from "../components/ScientistNetwork";
+import ContactProgrammingCart from "../components/ContactProgrammingCart";
 
 const techStack = [
   "MERN Stack",
@@ -79,7 +81,7 @@ export default function Contact() {
             </div>
 
             <div className="space-y-4">
-              <Info icon={<User />} text="Kachingprue Marma" />
+              <Info icon={<User />} text="Kyachingprue Marma" />
               <Info icon={<Mail />} text="kyachingpruemarma.info@gmail.com" />
               <Info icon={<MapPin />} text="Bangladesh (Remote Friendly)" />
             </div>
@@ -193,12 +195,13 @@ export default function Contact() {
           </motion.div>
         </div>
       </section>
-      <ExtraFeature/>
+      <ExtraFeature />
+      <ScientistNetwork />
+      <ContactProgrammingCart/>
    </div>
   );
 }
 
-/* ---------- Components ---------- */
 
 const Info = ({ icon, text }) => (
   <div className="flex items-center gap-3 text-slate-300">
