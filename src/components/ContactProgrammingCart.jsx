@@ -53,11 +53,10 @@ const ContactProgrammingCart = () => {
               </div>
               <span
                 className="absolute -top-10 left-1/2 -translate-x-1/2
-      whitespace-nowrap rounded-md
-      bg-black/80 px-3 py-1 text-sm text-white
-      opacity-0 peer-hover:opacity-100
-      transition duration-300"
-              >
+                whitespace-nowrap rounded-md
+                bg-black/80 px-3 py-1 text-sm text-white
+                opacity-0 peer-hover:opacity-100
+                transition duration-300">
                 kyachingpruemarma.info@gmail.com
               </span>
             </div>

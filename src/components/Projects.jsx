@@ -71,6 +71,32 @@ const projects = [
       "Vite",
     ],
   },
+  {
+    "name": "ChatFlow Chat Studio",
+    "category": "Social Media & Realtime Chat Platform",
+    "description": "A modern social media chat platform with realtime messaging using Socket.IO, secure authentication, dynamic user interactions, and a responsive, performance-optimized UI for seamless communication.",
+    "image": "https://i.ibb.co.com/tMk3nRJ2/chatflow-studio-image.png",
+    "live": "https://chatflow-chat-studio.vercel.app/",
+    "github": "https://github.com/kyachingprue/chatflow-chat-studio-client",
+    "tech": [
+      "React",
+      "Tailwind CSS",
+      "Firebase",
+      "Socket.IO",
+      "Axios",
+      "TanStack Query",
+      "React Hook Form",
+      "React Router DOM",
+      "Motion",
+      "Emoji Picker React",
+      "Vite",
+      "Recharts",
+      "Lucide React",
+      "Express",
+      "MongoDB",
+      "Node.js"
+    ],
+  }
 ];
 
 export default function Projects() {
