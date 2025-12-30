@@ -55,6 +55,28 @@ const projects = [
     ],
   },
   {
+    "name": "ChatFlow Chat Studio",
+    "category": "Social Media & Realtime Chat Platform",
+    "description": "A modern social media chat platform with realtime messaging using Socket.IO, secure authentication, dynamic user interactions, and a responsive, performance-optimized UI for seamless communication.",
+    "image": "https://i.ibb.co.com/tMk3nRJ2/chatflow-studio-image.png",
+    "live": "https://chatflow-chat-studio.vercel.app/",
+    "github": "https://github.com/kyachingprue/chatflow-chat-studio-client",
+    "tech": [
+      "React",
+      "Tailwind CSS",
+      "Firebase",
+      "Socket.IO",
+      "TanStack Query",
+      "React Hook Form",
+      "Motion",
+      "Cloudinary",
+      "Recharts",
+      "Express",
+      "MongoDB",
+      "Node.js"
+    ],
+  },
+  {
     name: "World Travel Website",
     category: "Travel & Booking Platform",
     description:
@@ -76,28 +98,6 @@ const projects = [
       "Node.js"
     ],
   },
-  {
-    "name": "ChatFlow Chat Studio",
-    "category": "Social Media & Realtime Chat Platform",
-    "description": "A modern social media chat platform with realtime messaging using Socket.IO, secure authentication, dynamic user interactions, and a responsive, performance-optimized UI for seamless communication.",
-    "image": "https://i.ibb.co.com/tMk3nRJ2/chatflow-studio-image.png",
-    "live": "https://chatflow-chat-studio.vercel.app/",
-    "github": "https://github.com/kyachingprue/chatflow-chat-studio-client",
-    "tech": [
-      "React",
-      "Tailwind CSS",
-      "Firebase",
-      "Socket.IO",
-      "TanStack Query",
-      "React Hook Form",
-      "Motion",
-      "Cloudinary",
-      "Recharts",
-      "Express",
-      "MongoDB",
-      "Node.js"
-    ],
-  }
 ];
 
 export default function Projects() {
