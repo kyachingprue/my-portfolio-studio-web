@@ -51,8 +51,7 @@ const Navbar = () => {
             Home
           </NavLink>
 
-          <NavLink
-            to="/my-projects"
+          <NavLink to="/my-projects"
             className={({ isActive }) =>
               `relative text-sm md:text-base transition-colors duration-300
      ${isActive ? "text-indigo-500 font-semibold" : "text-white hover:text-gray-400"}
