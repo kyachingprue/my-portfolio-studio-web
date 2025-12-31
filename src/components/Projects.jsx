@@ -75,29 +75,7 @@ const projects = [
       "MongoDB",
       "Node.js"
     ],
-  },
-  {
-    name: "World Travel Website",
-    category: "Travel & Booking Platform",
-    description:
-      "A modern travel booking website with secure Stripe payments, dynamic tour listings, performance-optimized UI, and responsive design for global travelers.",
-    image: "https://i.ibb.co.com/bYT4bsJ/travel-image.png",
-    live: "https://travel-project-frontend-rho.vercel.app/",
-    github: "https://github.com/kyachingprue/travel-project-frontend",
-    tech: [
-      "React",
-      "Tailwind CSS",
-      "Firebase",
-      "Stripe",
-      "TanStack Query",
-      "React Hook Form",
-      "Vite",
-      "Motion",
-      "Express",
-      "MongoDB",
-      "Node.js"
-    ],
-  },
+  }
 ];
 
 export default function Projects() {
