@@ -54,14 +54,28 @@ const Header = () => {
         {/* RIGHT IMAGE */}
         <div className="relative flex justify-center">
           {/* Profile Image */}
-          <motion.img
-            src="https://i.ibb.co.com/xSyPdjQZ/new-generate-image-1.png" 
-            alt="Kyachingprue Marma"
-            className="w-64 h-64 md:w-80 md:h-80 rounded-full object-cover border-4 border-gray-700 z-10"
-            initial={{ scale: 0.9 }}
-            animate={{ scale: 1 }}
+          <motion.div
+            className="relative flex items-center justify-center"
+            initial={{ scale: 0.9, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
             transition={{ duration: 0.6 }}
-          />
+          >
+            {/* Animated Gradient Border */}
+            <div className="absolute w-67.5 h-67.5 md:w-85 md:h-85 rounded-full 
+    bg-linear-to-r from-purple-500 via-pink-500 to-blue-500 
+    animate-spin-slow blur-sm opacity-80">
+            </div>
+
+            {/* Image */}
+            <motion.img
+              src="https://i.ibb.co.com/xSyPdjQZ/new-generate-image-1.png"
+              alt="Kyachingprue Marma"
+              className="w-64 h-64 md:w-80 md:h-80 rounded-full object-cover 
+    border-4 border-white z-10 shadow-2xl bg-black"
+              whileHover={{ scale: 1.05 }}
+              transition={{ type: "spring", stiffness: 200 }}
+            />
+          </motion.div>
 
           {/* Floating Tech Icons */}
           <motion.div
