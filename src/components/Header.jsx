@@ -52,7 +52,7 @@ const Header = () => {
         </div>
 
         {/* RIGHT IMAGE */}
-        <div className="relative flex justify-center">
+        <div className="relative flex justify-center pb-12 md:pb-0">
           {/* Profile Image */}
           <motion.div
             className="relative flex items-center justify-center"
@@ -65,7 +65,6 @@ const Header = () => {
     bg-linear-to-r from-purple-500 via-pink-500 to-blue-500 
     animate-spin-slow blur-sm opacity-80">
             </div>
-
             {/* Image */}
             <motion.img
               src="https://i.ibb.co.com/xSyPdjQZ/new-generate-image-1.png"
