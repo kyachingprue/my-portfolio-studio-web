@@ -2,7 +2,6 @@ import { useState } from "react";
 import { motion } from "motion/react";
 import {
   FaHtml5,
-  FaCss3Alt,
   FaJs,
   FaReact,
   FaNodeJs,
@@ -11,8 +10,6 @@ import {
 } from "react-icons/fa";
 import {
   SiTailwindcss,
-  SiDaisyui,
-  SiExpress,
   SiMongodb,
   SiFirebase,
   SiVercel,
@@ -88,7 +85,7 @@ const TechnologyCard = ({ tech }) => {
     >
       <div className="flex justify-center mb-4">{tech.icon}</div>
 
-      <h3 className="text-xl font-semibold text-center mb-3 bg-gradient-to-r from-gray-200 to-white bg-clip-text text-transparent">
+      <h3 className="text-xl font-semibold text-center mb-3 bg-linear-to-r from-gray-200 to-white bg-clip-text text-transparent">
         {tech.name}
       </h3>
 
@@ -113,9 +110,9 @@ const TechnologyCard = ({ tech }) => {
 
 const TechnologyCards = () => {
   return (
-    <section className="bg-gradient-to-b from-black via-gray-900 to-black py-20">
+    <section className="bg-linear-to-b from-black via-gray-900 to-black py-20">
       <div className="max-w-7xl mx-auto px-6">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 bg-gradient-to-r from-green-400 via-cyan-400 to-blue-500 bg-clip-text text-transparent">
+        <h2 className="text-3xl md:text-4xl py-2 font-bold text-center mb-12 bg-linear-to-r from-green-400 via-cyan-400 to-blue-500 bg-clip-text text-transparent">
           Technologies I Use
         </h2>
 
