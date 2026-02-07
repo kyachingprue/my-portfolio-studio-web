@@ -52,7 +52,7 @@ export default function Contact() {
 
   return (
     <div>
-      <section className="relative min-h-screen overflow-hidden bg-linear-to-br from-black via-slate-950 to-purple-950 text-white mt-10">
+      <section className="relative min-h-screen overflow-hidden bg-linear-to-br from-black via-slate-950 to-purple-950 text-white pt-10">
         {/* Background Glow */}
         <div className="absolute inset-0 -z-10">
           <div className="absolute top-1/3 left-1/4 h-72 w-72 rounded-full bg-indigo-600/20 blur-[120px]" />

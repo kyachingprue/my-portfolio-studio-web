@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const Banner = () => {
   return (
-    <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-linear-to-br from-[#0f172a] via-[#020617] to-[#020617] text-white mt-16 md:mt-8">
+    <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-linear-to-br from-[#0f172a] via-[#020617] to-[#020617] text-white pt-16 md:pt-8">
 
       {/* Background Glow Effects */}
       <div className="absolute -top-32 -left-32 w-125 h-125 bg-indigo-600/30 rounded-full blur-[150px]" />
