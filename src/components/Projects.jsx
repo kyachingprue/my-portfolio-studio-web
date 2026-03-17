@@ -3,6 +3,7 @@ import {
   Github,
   Layers,
   Globe,
+  FileBraces,
 } from "lucide-react";
 
 const projects = [
@@ -44,35 +45,41 @@ const projects = [
     live: "https://go-explore-travel-studio-client.vercel.app/",
     github_client: "https://github.com/kyachingprue/GoExplore-travel-studio-client",
     github_server: "https://github.com/kyachingprue/GoExplore-travel-studio-server",
+  },
+  {
+    name: "Freelance Job Marketplace",
+    category: "Full Stack Job & Freelancing Platform",
+    description: "Freelance Job Marketplace is a full-stack web platform that connects clients and freelancers for project collaboration. It features secure user authentication, job posting, bid management, freelancer profiles, real-time application tracking, and a modern responsive dashboard. The platform focuses on performance, scalability, and seamless user experience for both recruiters and developers.",
+    image: "https://i.ibb.co.com/qMx5fKWt/Screenshot-2026-03-18-011232.png",
+    live: "https://freelance-job-website-client.vercel.app/",
+    github_client: "https://github.com/kyachingprue/freelance-job-website-client",
+    github_server: "https://github.com/kyachingprue/freelance-job-website-server"
   }
 ];
 
-const skills = [
-  "HTML",
-  "CSS",
-  "TailwindCSS",
-  "DaisyUI",
-  "React",
-  "Motion",
-  "Axios",
-  "TanStack Query",
-  "Socket.IO",
-  "Lucide-React",
-  "React-Icons",
-  "Recharts",
-  "Express",
-  "CORS",
-  "Dotenv",
-  "MongoDB",
-  "Firebase",
-  "REST API",
-  "CRUD",
-  "React-Hot-Toast",
-  "SweetAlert2",
-];
+
+const nextProjects = [
+  {
+    name: "ProActive Motivation AI",
+    category: "Next.js & TypeScript AI Productivity Application",
+    description: "ProActive Motivation AI is a modern full-stack AI-powered web application built with Next.js and TypeScript to help users stay motivated and productive. The platform provides AI-generated motivational insights, smart content generation, interactive UI components, and secure authentication. It focuses on performance, clean architecture, and responsive design while demonstrating real-world AI integration in a modern SaaS-style application.",
+    image: "https://i.ibb.co.com/Pvzhb8SX/ae507af2-c3d2-4664-8b37-e325ab3d7961.png",
+    live: "https://proactive-motivation-production-8b8b.up.railway.app/",
+    github_link: "https://github.com/kyachingprue/ai-resonance-app",
+  },
+  {
+    name: "AI Document Analysis Platform",
+    category: "Next.js & TypeScript AI SaaS Application",
+    description: "AI Document Analysis Platform is a full-stack AI powered SaaS application built with Next.js and TypeScript that allows users to upload and analyze documents intelligently. The system provides AI-driven summaries, question answering, sentiment analysis, and entity extraction. It features secure authentication, document management, real-time AI processing, markdown rendering, and a modern responsive dashboard designed for performance and scalability.",
+    image: "https://i.ibb.co.com/CKxPTVss/Screenshot-2026-03-18-012913.png",
+    live: "https://ai-document-analysis.vercel.app/",
+    github_link: "https://github.com/kyachingprue/multi-document-analysis",
+  }
+]
 
 
 export default function Projects() {
+
   return (
     <section className="py-20 bg-linear-to-b from-slate-950 to-slate-900 text-white">
       <div className="max-w-7xl mx-auto px-6">
@@ -92,21 +99,13 @@ export default function Projects() {
           </p>
         </motion.div>
 
-        {/* All Skills */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
+        <motion.div initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="flex flex-wrap justify-center gap-3 mb-14"
+          transition={{ duration: 0.6 }}
+          className="flex items-center gap-2 px-2 pb-5"
         >
-          {skills.map((skill) => (
-            <p
-              key={skill}
-              className="bg-blue-900/50 text-gray-300 hover:text-white border border-slate-800 rounded-full px-4 py-1.5 text-sm transition"
-            >
-              {skill}
-            </p>
-          ))}
+          <FileBraces size={28} color="pink"/>
+          <h3 className="text-2xl md:text-3xl font-bold text-purple-400">MERN Stack Projects</h3>
         </motion.div>
 
         {/* Project Cards */}
@@ -168,6 +167,73 @@ export default function Projects() {
                   >
                     <Github size={18} />
                     Server
+                  </a>
+                </div>
+
+              </div>
+            </motion.div>
+          ))}
+        </div>
+        {/* Full Stack Project */}
+        <motion.div initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="flex items-center gap-2 px-2 py-10 mt-12"
+        >
+          <FileBraces size={28} color="pink" />
+          <h3 className="text-2xl md:text-3xl font-bold text-purple-400">Next.js & TypeScript Projects</h3>
+        </motion.div>
+
+        {/* Project Cards */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {nextProjects.map((project, index) => (
+            <motion.div
+              key={project.name}
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: index * 0.15 }}
+              className="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden shadow-lg hover:border-emerald-500 transition"
+            >
+              {/* Image */}
+              <img
+                src={project.image}
+                alt={project.name}
+                className="w-full h-56 p-2 md:p-4 lg:p5 object-cover"
+              />
+
+              {/* Content */}
+              <div className="p-4 space-y-4">
+                <div>
+                  <h3 className="text-2xl font-semibold">
+                    {project.name}
+                  </h3>
+                  <p className="text-sm text-emerald-400 flex items-center gap-2 mt-1">
+                    <Layers size={16} />
+                    {project.category}
+                  </p>
+                </div>
+
+                <p className="text-gray-400 text-sm leading-relaxed">
+                  {project.description}
+                </p>
+                {/* Links */}
+                <div className="flex flex-wrap items-center gap-4 pt-4">
+                  <a
+                    href={project.live}
+                    target="_blank"
+                    className="flex items-center gap-2 text-sm text-emerald-400 hover:underline"
+                  >
+                    <Globe size={18} />
+                    Live
+                  </a>
+
+                  <a
+                    href={project.github_link}
+                    target="_blank"
+                    className="flex items-center gap-2 text-sm text-gray-400 hover:text-white"
+                  >
+                    <Github size={18} />
+                    GitHub Link
                   </a>
                 </div>
 

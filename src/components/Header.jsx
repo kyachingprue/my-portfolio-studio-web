@@ -70,7 +70,7 @@ const Header = () => {
               src="https://i.ibb.co.com/xSyPdjQZ/new-generate-image-1.png"
               alt="Kyachingprue Marma"
               className="w-64 h-64 md:w-80 md:h-80 rounded-full object-cover 
-    border-4 border-white z-10 shadow-2xl bg-black"
+    border-4 border-white z-10 shadow-2xl bg-gray-400"
               whileHover={{ scale: 1.05 }}
               transition={{ type: "spring", stiffness: 200 }}
             />
