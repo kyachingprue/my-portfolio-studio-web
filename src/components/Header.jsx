@@ -22,7 +22,7 @@ const Header = () => {
   });
 
   return (
-    <section className="min-h-screen mt-16 md:mt-0 bg-linear-to-br from-slate-950 via-indigo-950 to-purple-950
+    <section className="min-h-screen pt-16 md:mt-0 bg-linear-to-br from-slate-950 via-indigo-950 to-purple-950
  text-white flex items-center relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
 
@@ -49,6 +49,25 @@ const Header = () => {
             REST APIs, Node.js, Express.js, CORS, Dotenv, MongoDB, and Firebase
             (authentication & authorization).
           </p>
+          <a
+            href="/kyachingmarmaCV.pdf"
+            download
+            className="sm:hidden inline-flex items-center my-5 gap-2 px-5 py-2.5 rounded-xl bg-linear-to-r from-blue-600 to-indigo-600 
+          text-white font-medium shadow-lg shadow-blue-500/20 hover:from-blue-500 hover:to-indigo-500 hover:shadow-xl hover:shadow-blue-500/30      hover:-translate-y-0.5 transition-all duration-300"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="w-7 h-7"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
+                d="M12 16v-8m0 8l-3-3m3 3l3-3M5 20h14" />
+            </svg>
+
+            Download CV
+          </a>
         </div>
 
         {/* RIGHT IMAGE */}

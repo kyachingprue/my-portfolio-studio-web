@@ -27,17 +27,17 @@ const Navbar = () => {
     >
       <div className="max-w-7xl mx-auto flex justify-between items-center p-4 text-white">
         {/* Left Side */}
-        <div className="text-3xl font-bold">
+        <div className="text-xl md:text-3xl font-bold">
           <Link
             to="/"
             className="bg-clip-text text-transparent bg-linear-to-r from-indigo-400 via-cyan-400 to-purple-400 animate-gradient-x"
           >
-            Portfolio
+            Portfolio Web
           </Link>
         </div>
 
         {/* Right Side */}
-        <div className="flex gap-3 md:gap-6 text-lg">
+        <div className="flex gap-3 items-center md:gap-6 text-lg">
           <NavLink
             to="/"
             className={({ isActive }) =>
@@ -74,6 +74,31 @@ const Navbar = () => {
           >
             Contact
           </NavLink>
+          <a
+            href="/kyachingmarmaCV.pdf"
+            download
+            className="hidden sm:inline-flex items-center gap-2 px-3 py-1.5 rounded-xl 
+  bg-linear-to-r from-blue-600 to-indigo-600 
+  text-white font-medium 
+  shadow-lg shadow-blue-500/20
+  hover:from-blue-500 hover:to-indigo-500
+  hover:shadow-xl hover:shadow-blue-500/30
+  hover:-translate-y-0.5
+  transition-all duration-300"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="w-6 h-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
+                d="M12 16v-8m0 8l-3-3m3 3l3-3M5 20h14" />
+            </svg>
+
+            Download CV
+          </a>
         </div>
       </div>
     </nav>
