@@ -13,7 +13,7 @@ const Header = () => {
     words: [
       "I'm Kyachingprue Marma",
       "I'm a Web Developer",
-      "I'm a MERN Stack Developer",
+      "I'm a Full Stack Developer",
       "I'm a Software Developer",
       "I'm a Programmer",
     ],
@@ -29,7 +29,7 @@ const Header = () => {
         {/* LEFT CONTENT */}
         <div>
           <h1 className="text-2xl mt-12 md:mt-0 md:text-4xl font-bold mb-4 bg-linear-to-r from-green-400 via-cyan-400 to-blue-500 bg-clip-text text-transparent">
-            MERN Stack Developer
+            Full Stack Developer
           </h1>
 
 
@@ -38,16 +38,10 @@ const Header = () => {
             <Cursor cursorColor="#22c55e" />
           </h2>
 
-          <p className="text-gray-400 leading-relaxed">
-            My name is <span className="text-white font-semibold">Kyachingprue Marma</span>.
-            I am from Singinala, Mohamuni Para.
-            I am a passionate MERN Stack Developer who loves building modern,
-            responsive, and scalable web applications.
+          <p className="text-gray-300 leading-relaxed">
+            My name is <span className="text-white font-semibold">Kyachingprue Marma</span>, a passionate Full Stack Web Developer from Singinala, Mohamuni Para. I specialize in building modern, scalable, and high-performance web applications using React.js, Next.js, TypeScript, Node.js, Express.js, MongoDB, and PostgreSQL.
             <br /><br />
-            I have experience working with HTML, CSS, TailwindCSS, DaisyUI,
-            JavaScript, React, TanStack Query (data fetching & caching), Axios,
-            REST APIs, Node.js, Express.js, CORS, Dotenv, MongoDB, and Firebase
-            (authentication & authorization).
+            I have strong experience in creating responsive user interfaces, developing secure REST APIs, database design, authentication systems, and performance optimization. I am committed to writing clean, maintainable code and continuously learning new technologies to build real-world impactful software solutions.
           </p>
           <a
             href="/kyachingmarmaCV.pdf"

@@ -10,7 +10,7 @@ const Footer = () => {
 
         {/* Description */}
         <p className="mb-6 text-gray-300">
-          I'm a passionate MERN stack developer. I create responsive and
+          I'm a passionate Full stack developer. I create responsive and
           dynamic web applications using modern technologies.
         </p>
 
@@ -18,7 +18,7 @@ const Footer = () => {
         <div className="mb-6">
           <p className="mb-2">💻 Programming Skills:</p>
           <p className="text-gray-300">
-            HTML | CSS | JavaScript | React.js | Node.js | Express.js | MongoDB | TailwindCSS | REST API | Firebase
+            HTML | CSS | JavaScript | React.js | Next.js | TypeScript | Node.js | Express.js | MongoDB | PostgressSQL |Shadcn UI | TailwindCSS | REST API | Firebase
           </p>
         </div>
 

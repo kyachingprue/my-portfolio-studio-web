@@ -5,7 +5,6 @@ import {
   FaJs,
   FaReact,
   FaNodeJs,
-  FaGitAlt,
   FaGithub,
 } from "react-icons/fa";
 import {
@@ -13,7 +12,9 @@ import {
   SiMongodb,
   SiFirebase,
   SiVercel,
-  SiRender,
+  SiNextdotjs,
+  SiTypescript,
+  SiPostgresql,
 } from "react-icons/si";
 
 const technologies = [
@@ -36,10 +37,22 @@ const technologies = [
       "JavaScript adds interactivity and dynamic behavior to web applications. I use modern ES6+ features to manage logic, handle events, work with APIs, and build efficient frontend and backend solutions.",
   },
   {
-    name: "React",
+    name: "React.js",
     icon: <FaReact className="text-cyan-300 text-4xl" />,
     description:
       "React is my primary frontend library. I build reusable components, manage state efficiently, and use Axios for API calls. I also use TanStack Query for powerful data fetching, caching, synchronization, and server-state management.",
+  },
+  {
+    name: "Next.js",
+    icon: <SiNextdotjs className="text-white text-4xl" />,
+    description:
+      "Next.js is my primary React framework for building production-ready full stack applications. I use App Router, Server Components, API Routes, authentication, and SEO optimization. I also focus on performance improvements using SSR, SSG, and modern full-stack architecture.",
+  },
+  {
+    name: "TypeScript",
+    icon: <SiTypescript className="text-blue-400 text-4xl" />,
+    description:
+      "TypeScript helps me build scalable and maintainable applications with strong type safety. I use it in React and Next.js projects to reduce bugs, improve code quality, and create more predictable and professional codebases.",
   },
   {
     name: "Node.js & Express",
@@ -52,6 +65,12 @@ const technologies = [
     icon: <SiMongodb className="text-green-400 text-4xl" />,
     description:
       "MongoDB is a NoSQL database used to store application data. I design schemas, perform CRUD operations, and manage data efficiently for scalable MERN stack applications.",
+  },
+  {
+    name: "PostgreSQL",
+    icon: <SiPostgresql className="text-blue-500 text-4xl" />,
+    description:
+      "PostgreSQL is my preferred relational database for building secure and scalable applications. I design efficient schemas, write optimized queries, and integrate PostgreSQL with Node.js and Next.js applications for reliable data management.",
   },
   {
     name: "Firebase",

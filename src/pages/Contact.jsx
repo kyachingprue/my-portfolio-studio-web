@@ -19,14 +19,19 @@ import ContactProgrammingCart from "../components/ContactProgrammingCart";
 
 const techStack = [
   "MERN Stack",
+  "Full Stack",
   "Next.js",
+  "TypeScript.js",
   "Firebase Auth",
+  "Clerk Auth",
   "JWT Security",
   "Stripe Payment",
   "REST API",
   "TanStack Query",
   "Node.js",
   "Express.js",
+  "Mongodb",
+  "PostgressSQL",
   "Git & Github",
 ];
 
@@ -75,7 +80,7 @@ export default function Contact() {
                 </span>
               </h2>
               <p className="mt-4 text-slate-300 max-w-lg">
-                I’m a MERN Stack Developer passionate about building scalable,
+                I’m a Full Stack Developer passionate about building scalable,
                 secure, and high-performance web applications.
               </p>
             </div>
@@ -149,7 +154,7 @@ export default function Contact() {
               <div>
                 <p className="text-sm text-slate-400 mb-2">Current Tech Stack</p>
                 <div className="flex flex-wrap gap-2">
-                  {["React", "Node.js", "MongoDB", "Tailwind", "JWT", "Firebase"].map(
+                  {["React","Next.js","TypeScript", "Node.js", "MongoDB", "PostgressSQL","Shadcn UI", "Tailwind", "JWT", "Firebase"].map(
                     (tech, i) => (
                       <motion.span
                         key={i}
@@ -179,7 +184,7 @@ export default function Contact() {
                 <Cpu className="text-cyan-400" />
                 <span className="text-slate-300">
                   Environment:{" "}
-                  <span className="text-cyan-400">MERN • Vite • VS Code</span>
+                  <span className="text-cyan-400">MERN-Stack • Full-Stack • Vite • VS Code</span>
                 </span>
               </div>
 

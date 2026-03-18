@@ -42,7 +42,7 @@ const Navbar = () => {
             to="/"
             className={({ isActive }) =>
               `relative text-sm md:text-base transition-colors duration-300
-     ${isActive ? "text-indigo-500 font-semibold" : "text-white hover:text-gray-400"}
+     ${isActive ? "text-indigo-300 font-semibold" : "text-white hover:text-gray-400"}
      after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0
      after:bg-indigo-500 after:transition-all after:duration-300
      hover:after:w-full`
@@ -54,7 +54,7 @@ const Navbar = () => {
           <NavLink to="/my-projects"
             className={({ isActive }) =>
               `relative text-sm md:text-base transition-colors duration-300
-     ${isActive ? "text-indigo-500 font-semibold" : "text-white hover:text-gray-400"}
+     ${isActive ? "text-indigo-300 font-semibold" : "text-white hover:text-gray-400"}
      after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0
      after:bg-indigo-500 after:transition-all after:duration-300
      hover:after:w-full`
@@ -66,7 +66,7 @@ const Navbar = () => {
             to="/contact-me"
             className={({ isActive }) =>
               `relative text-sm md:text-base transition-colors duration-300
-     ${isActive ? "text-indigo-500 font-semibold" : "text-white hover:text-gray-400"}
+     ${isActive ? "text-indigo-300 font-semibold" : "text-white hover:text-gray-400"}
      after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0
      after:bg-indigo-500 after:transition-all after:duration-300
      hover:after:w-full`
@@ -88,7 +88,7 @@ const Navbar = () => {
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="w-6 h-6"
+              className="w-7 h-7"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"

@@ -18,8 +18,8 @@ const Banner = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <span className="inline-flex items-center gap-2 px-4 py-1 mb-4 rounded-full bg-white/10 text-sm backdrop-blur mt-10 md:mt-0">
-            <Code size={16} /> MERN Stack Web Developer
+          <span className="inline-flex items-center gap-2 px-4 py-1 mb-4 rounded-full bg-fuchsia-700/30 text-sm backdrop-blur mt-10 md:mt-0">
+            <Code size={16} /> Full Stack Web Developer
           </span>
 
           <h1 className="text-2xl md:text-3xl xl:text-4xl font-extrabold leading-tight">
@@ -31,16 +31,14 @@ const Banner = () => {
           </h1>
 
           <p className="mt-6 text-gray-300 max-w-xl">
-            I’m a passionate MERN Stack Developer focused on creating modern,
-            high-performance, and secure web applications using React, Node.js,
-            Express, MongoDB, and cutting-edge technologies.
+            I’m a Full Stack Developer skilled in React.js, Next.js, TypeScript, Node.js, Express.js, MongoDB, and PostgreSQL. I specialize in building scalable, secure, and high-performance web applications with modern technologies. I focus on clean code, efficient backend architecture, and responsive user experiences. Passionate about continuous learning and solving real-world problems through software.
           </p>
 
           {/* BUTTONS */}
           <div className="mt-8 flex flex-wrap gap-4">
             <Link
               to="/projects"
-              className="group inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-linear-to-r from-indigo-500 to-cyan-500 text-white font-semibold shadow-lg hover:scale-105 transition"
+              className="group inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-linear-to-r from-indigo-600 to-cyan-600 text-white font-semibold shadow-lg hover:scale-105 transition"
             >
               View Projects
               <ArrowRight className="group-hover:translate-x-1 transition" />
@@ -67,11 +65,11 @@ const Banner = () => {
               Tech Stack I Use
             </h3>
 
-            <div className="grid grid-cols-2 gap-6">
-              <TechItem icon={<Code />} title="Frontend" desc="React, Tailwind, Vite" />
+            <div className="grid grid-cols-2 gap-5">
+              <TechItem icon={<Code />} title="Frontend" desc="React,Next.js, TypeScript, Tailwind, Vite" />
               <TechItem icon={<Server />} title="Backend" desc="Node.js, Express, REST API" />
-              <TechItem icon={<Database />} title="Database" desc="MongoDB, Firebase" />
-              <TechItem icon={<Code />} title="Tools" desc="Axios, TanStack Query, Git" />
+              <TechItem icon={<Database />} title="Database" desc="MongoDB, Firebase , PostgressSQL" />
+              <TechItem icon={<Code />} title="Tools" desc="Axios, TanStack Query, Git & GitHub" />
             </div>
           </div>
         </motion.div>

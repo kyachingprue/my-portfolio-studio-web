@@ -94,7 +94,7 @@ export default function Projects() {
             My <span className="text-emerald-400">Projects</span>
           </h2>
           <p className="mt-4 text-gray-400 max-w-2xl mx-auto">
-            A selection of MERN stack projects showcasing real-world
+            A selection of MERN-Stack and Full-Stack projects showcasing real-world
             applications, clean architecture, and production-ready design.
           </p>
         </motion.div>
