@@ -44,7 +44,7 @@ const Header = () => {
             I have strong experience in creating responsive user interfaces, developing secure REST APIs, database design, authentication systems, and performance optimization. I am committed to writing clean, maintainable code and continuously learning new technologies to build real-world impactful software solutions.
           </p>
           <a
-            href="/kyachingmarmaCV.pdf"
+            href="/kyachingprue_cv.pdf"
             download
             className="sm:hidden inline-flex items-center my-5 gap-2 px-5 py-2.5 rounded-xl bg-linear-to-r from-blue-600 to-indigo-600 
           text-white font-medium shadow-lg shadow-blue-500/20 hover:from-blue-500 hover:to-indigo-500 hover:shadow-xl hover:shadow-blue-500/30      hover:-translate-y-0.5 transition-all duration-300"

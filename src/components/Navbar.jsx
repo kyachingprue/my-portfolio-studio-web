@@ -75,7 +75,7 @@ const Navbar = () => {
             Contact
           </NavLink>
           <a
-            href="/kyachingmarmaCV.pdf"
+            href="/kyachingprue_cv.pdf"
             download
             className="hidden sm:inline-flex items-center gap-2 px-3 py-1.5 rounded-xl 
   bg-linear-to-r from-blue-600 to-indigo-600 
