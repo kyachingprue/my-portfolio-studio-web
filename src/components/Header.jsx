@@ -24,7 +24,7 @@ const Header = () => {
   return (
     <section className="min-h-screen pt-16 md:mt-0 bg-linear-to-br from-slate-950 via-indigo-950 to-purple-950
  text-white flex items-center relative overflow-hidden">
-      <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+      <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 
         {/* LEFT CONTENT */}
         <div>
@@ -46,7 +46,7 @@ const Header = () => {
           <a
             href="/kyachingprue_cv.pdf"
             download
-            className="sm:hidden inline-flex items-center my-5 gap-2 px-5 py-2.5 rounded-xl bg-linear-to-r from-blue-600 to-indigo-600 
+            className="sm:hidden inline-flex items-center my-5 gap-2 px-5 py-2.5 rounded-xl bg-linear-to-r from-blue-600 to-indigo-600
           text-white font-medium shadow-lg shadow-blue-500/20 hover:from-blue-500 hover:to-indigo-500 hover:shadow-xl hover:shadow-blue-500/30      hover:-translate-y-0.5 transition-all duration-300"
           >
             <svg
@@ -74,15 +74,15 @@ const Header = () => {
             transition={{ duration: 0.6 }}
           >
             {/* Animated Gradient Border */}
-            <div className="absolute w-67.5 h-67.5 md:w-85 md:h-85 rounded-full 
-    bg-linear-to-r from-purple-500 via-pink-500 to-blue-500 
+            <div className="absolute w-67.5 h-67.5 md:w-85 md:h-85 rounded-full
+    bg-linear-to-r from-purple-500 via-pink-500 to-blue-500
     animate-spin-slow blur-sm opacity-80">
             </div>
             {/* Image */}
             <motion.img
               src="https://i.ibb.co.com/xSyPdjQZ/new-generate-image-1.png"
               alt="Kyachingprue Marma"
-              className="w-64 h-64 md:w-80 md:h-80 rounded-full object-cover 
+              className="w-64 h-64 md:w-80 md:h-80 rounded-full object-cover
     border-4 border-white z-10 shadow-2xl bg-gray-400"
               whileHover={{ scale: 1.05 }}
               transition={{ type: "spring", stiffness: 200 }}

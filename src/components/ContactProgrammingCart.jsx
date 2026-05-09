@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const ContactProgrammingCart = () => {
   return (
     <section className="min-h-screen bg-linear-to-br from-black via-purple-950 to-pink-950 flex items-center justify-center px-6 py-20">
-      <div className="max-w-6xl w-full grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+      <div className="max-w-6xl w-full grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 
         {/* 🔹 LEFT SIDE – PROGRAMMING IMAGE */}
         <motion.div

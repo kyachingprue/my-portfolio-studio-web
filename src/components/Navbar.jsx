@@ -31,7 +31,7 @@ const Navbar = () => {
         <div className="text-xl md:text-3xl font-bold">
           <Link
             to="/"
-            className="bg-clip-text flex items-center text-transparent bg-linear-to-r from-indigo-400 via-cyan-400 to-purple-400 animate-gradient-x"
+            className="bg-clip-text flex items-center gap-2 text-transparent bg-linear-to-r from-indigo-400 via-cyan-400 to-purple-400 animate-gradient-x"
           >
             Portfolio <span className="hidden md:block">Web</span>
           </Link>
