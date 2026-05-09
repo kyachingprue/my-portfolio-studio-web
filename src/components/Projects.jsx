@@ -8,54 +8,72 @@ import {
 
 const projects = [
   {
-    name: "GreenBasket",
-    category: "MERN E-Commerce Platform",
+    name: 'GreenBasket',
+    category: 'MERN E-Commerce Platform',
     description:
-      "A full-featured MERN stack e-commerce platform with secure payments, authentication, admin dashboard, real-time data fetching, and modern UI animations.",
-    image: "https://i.ibb.co.com/DPjXFCn7/1-VMVKGNTxc7l-VEgce5uxd-Q.jpg",
-    live: "https://analytics-chemical-auth.web.app/",
-    github_client: "https://github.com/kyachingprue/my-ecommerce-client",
-    github_server: "https://github.com/kyachingprue/my-ecommerce-server",
+      'A full-featured MERN stack e-commerce platform with secure payments, authentication, admin dashboard, real-time data fetching, and modern UI animations.',
+    image: 'https://i.ibb.co.com/DPjXFCn7/1-VMVKGNTxc7l-VEgce5uxd-Q.jpg',
+    live: 'https://analytics-chemical-auth.web.app/',
+    github_client: 'https://github.com/kyachingprue/my-ecommerce-client',
+    github_server: 'https://github.com/kyachingprue/my-ecommerce-server'
   },
   {
-    name: "CodeTrail",
-    category: "Programming Course Platform",
+    name: 'CodeTrail',
+    category: 'Programming Course Platform',
     description:
-      "An online programming course platform with authentication, structured courses, and interactive UI. Video streaming is limited due to low-range Render server constraints.",
-    image: "https://i.ibb.co.com/prNgz6PY/1673755852454.jpg",
-    live: "https://school-mate-auth.web.app/",
-    github_client: "https://github.com/kyachingprue/code-trail-frontend",
-    github_server: "https://github.com/kyachingprue/code-trail-backend",
+      'An online programming course platform with authentication, structured courses, and interactive UI. Video streaming is limited due to low-range Render server constraints.',
+    image: 'https://i.ibb.co.com/prNgz6PY/1673755852454.jpg',
+    live: 'https://school-mate-auth.web.app/',
+    github_client: 'https://github.com/kyachingprue/code-trail-frontend',
+    github_server: 'https://github.com/kyachingprue/code-trail-backend'
   },
   {
-    name: "ChatFlow Chat Studio",
-    category: "Social Media & Realtime Chat Platform",
-    description: "A modern social media chat platform with realtime messaging using Socket.IO, secure authentication, dynamic user interactions, and a responsive, performance-optimized UI for seamless communication.",
-    image: "https://i.ibb.co.com/tMk3nRJ2/chatflow-studio-image.png",
-    live: "https://chatflow-chat-studio.vercel.app/",
-    github_client: "https://github.com/kyachingprue/chatflow-chat-studio-client",
-    github_server: "https://github.com/kyachingprue/chatflow-studio-server-second",
-  },
-  {
-    name: "GoExplore Travel Studio",
-    category: "MERN Travel & Booking Platform",
+    name: 'ChatFlow Chat Studio',
+    category: 'Social Media & Realtime Chat Platform',
     description:
-      "GoExplore Travel Studio is a full-stack MERN travel platform designed for discovering, exploring, and booking travel experiences. It features secure authentication, dynamic travel packages, real-time data fetching, user bookings, payment integration, and an intuitive, responsive UI optimized for performance and modern travel experiences.",
-    image: "https://i.ibb.co.com/nNQsxhDb/Screenshot-2026-01-13-224233.png",
-    live: "https://go-explore-travel-studio-client.vercel.app/",
-    github_client: "https://github.com/kyachingprue/GoExplore-travel-studio-client",
-    github_server: "https://github.com/kyachingprue/GoExplore-travel-studio-server",
+      'A modern social media chat platform with realtime messaging using Socket.IO, secure authentication, dynamic user interactions, and a responsive, performance-optimized UI for seamless communication.',
+    image: 'https://i.ibb.co.com/tMk3nRJ2/chatflow-studio-image.png',
+    live: 'https://chatflow-chat-studio.vercel.app/',
+    github_client:
+      'https://github.com/kyachingprue/chatflow-chat-studio-client',
+    github_server:
+      'https://github.com/kyachingprue/chatflow-studio-server-second'
   },
   {
-    name: "Freelance Job Marketplace",
-    category: "Full Stack Job & Freelancing Platform",
-    description: "Freelance Job Marketplace is a full-stack web platform that connects clients and freelancers for project collaboration. It features secure user authentication, job posting, bid management, freelancer profiles, real-time application tracking, and a modern responsive dashboard. The platform focuses on performance, scalability, and seamless user experience for both recruiters and developers.",
-    image: "https://i.ibb.co.com/qMx5fKWt/Screenshot-2026-03-18-011232.png",
-    live: "https://freelance-job-website-client.vercel.app/",
-    github_client: "https://github.com/kyachingprue/freelance-job-website-client",
-    github_server: "https://github.com/kyachingprue/freelance-job-website-server"
+    name: 'GoExplore Travel Studio',
+    category: 'MERN Travel & Booking Platform',
+    description:
+      'A modern MERN travel platform for exploring destinations, booking trips, and managing travel experiences with a responsive and user-friendly interface.',
+    image: 'https://i.ibb.co.com/nNQsxhDb/Screenshot-2026-01-13-224233.png',
+    live: 'https://go-explore-travel-studio-client.vercel.app/',
+    github_client:
+      'https://github.com/kyachingprue/GoExplore-travel-studio-client',
+    github_server:
+      'https://github.com/kyachingprue/GoExplore-travel-studio-server'
+  },
+  {
+    name: 'Freelance Job Marketplace',
+    category: 'Full Stack Job & Freelancing Platform',
+    description:
+      'A modern full-stack freelancing platform where clients can post jobs and freelancers can apply, manage bids, and collaborate through a responsive dashboard.',
+    image: 'https://i.ibb.co.com/qMx5fKWt/Screenshot-2026-03-18-011232.png',
+    live: 'https://freelance-job-website-client.vercel.app/',
+    github_client:
+      'https://github.com/kyachingprue/freelance-job-website-client',
+    github_server:
+      'https://github.com/kyachingprue/freelance-job-website-server'
+  },
+  {
+    name: 'AetherAI',
+    category: 'AI-Powered SaaS & Digital Innovation Platform',
+    description:
+      'A modern AI-driven platform focused on digital innovation, smart automation, creative technology, and futuristic user experiences with sleek UI animations and responsive web design.',
+    image: 'https://i.ibb.co.com/KxFjyYs9/Aether-AI.png',
+    live: 'https://aetheraiwebsite.vercel.app/',
+    github_client: 'https://github.com/kyachingprue/ai-chat-project-client',
+    github_server: 'https://github.com/kyachingprue/ai-chat-project-client'
   }
-];
+]
 
 
 const nextProjects = [
@@ -105,7 +123,7 @@ export default function Projects() {
           className="flex items-center gap-2 px-2 pb-5"
         >
           <FileBraces size={28} color="pink"/>
-          <h3 className="text-2xl md:text-3xl font-bold text-purple-400">MERN Stack Projects</h3>
+          <h3 className="text-2xl md:text-3xl font-bold text-purple-400">React.js & Node.js Projects</h3>
         </motion.div>
 
         {/* Project Cards */}
