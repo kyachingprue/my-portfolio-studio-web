@@ -1,10 +1,5 @@
-import { motion } from "motion/react";
-import {
-  Github,
-  Layers,
-  Globe,
-  FileBraces,
-} from "lucide-react";
+import { motion } from 'motion/react'
+import { Github, Layers, Globe, FileBraces } from 'lucide-react'
 
 const projects = [
   {
@@ -75,29 +70,28 @@ const projects = [
   }
 ]
 
-
 const nextProjects = [
   {
-    name: "ProActive Motivation AI",
-    category: "Next.js & TypeScript AI Productivity Application",
-    description: "ProActive Motivation AI is a modern full-stack AI-powered web application built with Next.js and TypeScript to help users stay motivated and productive. The platform provides AI-generated motivational insights, smart content generation, interactive UI components, and secure authentication. It focuses on performance, clean architecture, and responsive design while demonstrating real-world AI integration in a modern SaaS-style application.",
-    image: "https://i.ibb.co.com/Pvzhb8SX/ae507af2-c3d2-4664-8b37-e325ab3d7961.png",
-    live: "https://proactive-motivation-production-8b8b.up.railway.app/",
-    github_link: "https://github.com/kyachingprue/ai-resonance-app",
+    name: '3D Portfolio Website',
+    category: 'Next.js & TypeScript Interactive Portfolio',
+    description:
+      'A modern full-stack portfolio website built with Next.js, TypeScript, and Three.js for immersive interactive experiences. Features smooth animations, responsive layouts, advanced UI design, and high-performance optimization across all devices. Designed to showcase projects, technical skills, creative development, and modern web engineering expertise.',
+    image: 'https://i.ibb.co.com/nWTd6D0/Screenshot-2026-05-11-221425.png',
+    live: 'https://my-portfolio-web-three-chi.vercel.app/',
+    github_link: 'https://github.com/kyachingprue/my-portfolio-web'
   },
   {
-    name: "AI Document Analysis Platform",
-    category: "Next.js & TypeScript AI SaaS Application",
-    description: "AI Document Analysis Platform is a full-stack AI powered SaaS application built with Next.js and TypeScript that allows users to upload and analyze documents intelligently. The system provides AI-driven summaries, question answering, sentiment analysis, and entity extraction. It features secure authentication, document management, real-time AI processing, markdown rendering, and a modern responsive dashboard designed for performance and scalability.",
-    image: "https://i.ibb.co.com/CKxPTVss/Screenshot-2026-03-18-012913.png",
-    live: "https://ai-document-analysis.vercel.app/",
-    github_link: "https://github.com/kyachingprue/multi-document-analysis",
+    name: 'AI Document Analysis Platform',
+    category: 'Next.js & TypeScript AI SaaS Application',
+    description:
+      'A full-stack AI SaaS platform for uploading and analyzing documents intelligently. Features AI summaries, question answering, sentiment analysis, and entity extraction. Built with secure authentication, real-time processing, and a modern responsive dashboard.',
+    image: 'https://i.ibb.co.com/CKxPTVss/Screenshot-2026-03-18-012913.png',
+    live: 'https://ai-document-analysis.vercel.app/',
+    github_link: 'https://github.com/kyachingprue/multi-document-analysis'
   }
 ]
 
-
 export default function Projects() {
-
   return (
     <section className="py-20 bg-linear-to-b from-slate-950 to-slate-900 text-white">
       <div className="max-w-7xl mx-auto px-6">
@@ -112,18 +106,22 @@ export default function Projects() {
             My <span className="text-emerald-400">Projects</span>
           </h2>
           <p className="mt-4 text-gray-400 max-w-2xl mx-auto">
-            A selection of MERN-Stack and Full-Stack projects showcasing real-world
-            applications, clean architecture, and production-ready design.
+            A selection of MERN-Stack and Full-Stack projects showcasing
+            real-world applications, clean architecture, and production-ready
+            design.
           </p>
         </motion.div>
 
-        <motion.div initial={{ opacity: 0, y: 40 }}
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           className="flex items-center gap-2 px-2 pb-5"
         >
-          <FileBraces size={28} color="pink"/>
-          <h3 className="text-2xl md:text-3xl font-bold text-purple-400">React.js & Node.js Projects</h3>
+          <FileBraces size={28} color="pink" />
+          <h3 className="text-2xl md:text-3xl font-bold text-purple-400">
+            React.js & Node.js Projects
+          </h3>
         </motion.div>
 
         {/* Project Cards */}
@@ -146,9 +144,7 @@ export default function Projects() {
               {/* Content */}
               <div className="p-4 space-y-4">
                 <div>
-                  <h3 className="text-2xl font-semibold">
-                    {project.name}
-                  </h3>
+                  <h3 className="text-2xl font-semibold">{project.name}</h3>
                   <p className="text-sm text-emerald-400 flex items-center gap-2 mt-1">
                     <Layers size={16} />
                     {project.category}
@@ -187,19 +183,21 @@ export default function Projects() {
                     Server
                   </a>
                 </div>
-
               </div>
             </motion.div>
           ))}
         </div>
         {/* Full Stack Project */}
-        <motion.div initial={{ opacity: 0, y: 40 }}
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           className="flex items-center gap-2 px-2 py-10 mt-12"
         >
           <FileBraces size={28} color="pink" />
-          <h3 className="text-2xl md:text-3xl font-bold text-purple-400">Next.js & TypeScript Projects</h3>
+          <h3 className="text-2xl md:text-3xl font-bold text-purple-400">
+            Next.js & TypeScript Projects
+          </h3>
         </motion.div>
 
         {/* Project Cards */}
@@ -222,9 +220,7 @@ export default function Projects() {
               {/* Content */}
               <div className="p-4 space-y-4">
                 <div>
-                  <h3 className="text-2xl font-semibold">
-                    {project.name}
-                  </h3>
+                  <h3 className="text-2xl font-semibold">{project.name}</h3>
                   <p className="text-sm text-emerald-400 flex items-center gap-2 mt-1">
                     <Layers size={16} />
                     {project.category}
@@ -254,12 +250,11 @@ export default function Projects() {
                     GitHub Link
                   </a>
                 </div>
-
               </div>
             </motion.div>
           ))}
         </div>
       </div>
     </section>
-  );
+  )
 }
