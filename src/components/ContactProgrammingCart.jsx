@@ -6,7 +6,6 @@ const ContactProgrammingCart = () => {
   return (
     <section className="min-h-screen bg-linear-to-br from-black via-purple-950 to-pink-950 flex items-center justify-center px-6 py-20">
       <div className="max-w-6xl w-full grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-
         {/* 🔹 LEFT SIDE – PROGRAMMING IMAGE */}
         <motion.div
           initial={{ opacity: 0, x: -60 }}
@@ -15,7 +14,7 @@ const ContactProgrammingCart = () => {
           className="flex justify-center"
         >
           <img
-            src="https://i.ibb.co.com/9kHbct0h/9-kid-is-coding-in-different-programming-languages.jpg"
+            src="https://i.ibb.co.com/ym2dnnS5/growtika-YOEHA0-Ou8-ZY-unsplash.jpg"
             alt="Programming"
             className="rounded-2xl shadow-2xl max-h-105 object-cover"
           />
@@ -38,10 +37,10 @@ const ContactProgrammingCart = () => {
 
           {/* DESCRIPTION */}
           <p className="text-gray-300 leading-relaxed">
-            I’m passionate about building modern, scalable, and user-friendly web
-            applications using cutting-edge technologies like React, Node.js,
-            MongoDB, and modern UI/UX principles. If you have an idea, project,
-            or opportunity — let’s connect and turn it into reality.
+            I’m passionate about building modern, scalable, and user-friendly
+            web applications using cutting-edge technologies like React,
+            Node.js, MongoDB, and modern UI/UX principles. If you have an idea,
+            project, or opportunity — let’s connect and turn it into reality.
           </p>
 
           {/* CONTACT ICONS */}
@@ -56,12 +55,14 @@ const ContactProgrammingCart = () => {
                 whitespace-nowrap rounded-md
                 bg-black/80 px-3 py-1 text-sm text-white
                 opacity-0 peer-hover:opacity-100
-                transition duration-300">
+                transition duration-300"
+              >
                 kyachingpruemarma.info@gmail.com
               </span>
             </div>
 
-            <Link to="https://github.com/kyachingprue"
+            <Link
+              to="https://github.com/kyachingprue"
               target="_blank"
               className="text-gray-300 hover:text-purple-400 transition"
             >
@@ -77,10 +78,9 @@ const ContactProgrammingCart = () => {
             </Link>
           </div>
         </motion.div>
-
       </div>
     </section>
-  );
+  )
 };
 
 export default ContactProgrammingCart;
