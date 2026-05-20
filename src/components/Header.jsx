@@ -5,61 +5,167 @@ import {
   FaReact,
   FaJs,
   FaNodeJs,
+  FaFacebookF,
+  FaTwitter,
+  FaLinkedinIn,
+  FaGithub,
 } from "react-icons/fa";
 import { SiExpress, SiMongodb, SiFirebase } from "react-icons/si";
 
 const Header = () => {
   const [text] = useTypewriter({
     words: [
-      "I'm Kyachingprue Marma",
-      "I'm a Web Developer",
+      "I'm a Website Developer",
+      "I'm a MERN Stack Developer",
       "I'm a Full Stack Developer",
       "I'm a Software Developer",
       "I'm a Programmer",
+      "I'm a Coder"
     ],
     loop: true,
     delaySpeed: 2000,
   });
 
   return (
-    <section className="min-h-screen pt-16 md:mt-0 bg-linear-to-br from-slate-950 via-indigo-950 to-purple-950
- text-white flex items-center relative overflow-hidden">
+    <section
+      className="min-h-screen pt-16 md:mt-0 bg-linear-to-br from-slate-950 via-indigo-950 to-purple-950
+ text-white flex items-center relative overflow-hidden"
+    >
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-
         {/* LEFT CONTENT */}
-        <div>
-          <h1 className="text-2xl mt-12 md:mt-0 md:text-4xl font-bold mb-4 bg-linear-to-r from-green-400 via-cyan-400 to-blue-500 bg-clip-text text-transparent">
-            Full Stack Developer
+        <div className="flex flex-col pt-8 md:pt-0 justify-center">
+          {/* Small Intro Text */}
+          <p className="text-green-400 font-medium tracking-[0.25em] uppercase mb-3 text-sm md:text-base">
+            Hello, I'm
+          </p>
+
+          {/* Main Name */}
+          <h1 className="text-2xl sm:text-3xl lg:text-5xl font-black leading-tight mb-4">
+            <span className="bg-linear-to-r from-green-400 via-cyan-400 to-blue-500 bg-clip-text text-transparent">
+              Kyachingprue Marma
+            </span>
           </h1>
 
+          {/* Auto Writing Text */}
+          <div className="flex items-center gap-2 mb-3">
+            <h2 className="text-lg sm:text-xl md:text-2xl font-semibold text-gray-200">
+              {text}
+              <Cursor cursorColor="#22c55e" />
+            </h2>
+          </div>
 
-          <h2 className="text-xl md:text-2xl text-gray-300 mb-6">
-            {text}
-            <Cursor cursorColor="#22c55e" />
-          </h2>
-
-          <p className="text-gray-300 leading-relaxed">
-            My name is <span className="text-white font-semibold">Kyachingprue Marma</span>, a passionate Full Stack Web Developer from Singinala, Mohamuni Para. I specialize in building modern, scalable, and high-performance web applications using React.js, Next.js, TypeScript, Node.js, Express.js, MongoDB, and PostgreSQL.
-            <br /><br />
-            I have strong experience in creating responsive user interfaces, developing secure REST APIs, database design, authentication systems, and performance optimization. I am committed to writing clean, maintainable code and continuously learning new technologies to build real-world impactful software solutions.
+          {/* Description */}
+          <p className="text-gray-300 leading-8 text-sm sm:text-base lg:text-lg max-w-3xl">
+            Passionate{' '}
+            <span className="text-white font-semibold">
+              Full Stack Developer
+            </span>{' '}
+            focused on building modern, scalable, and high-performance web
+            applications with clean user experiences. Specialized in{' '}
+            <span className="text-cyan-400 font-semibold">React.js</span>,{' '}
+            <span className="text-cyan-400 font-semibold">Next.js</span>,{' '}
+            <span className="text-cyan-400 font-semibold">TypeScript</span>,{' '}
+            <span className="text-cyan-400 font-semibold">Node.js</span>,{' '}
+            <span className="text-cyan-400 font-semibold">Express.js</span>,{' '}
+            <span className="text-cyan-400 font-semibold">MongoDB</span>, and{' '}
+            <span className="text-cyan-400 font-semibold">PostgreSQL</span> to
+            create secure, responsive, and real-world digital solutions.
           </p>
+
+          {/* Social Media Icons */}
+          <div className="flex items-center gap-4 mt-8 flex-wrap">
+            <a
+              href="https://www.facebook.com/kyaching.prue.marma.2025/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group"
+            >
+              <div className="w-12 h-12 rounded-full border border-white/10 bg-white/5 backdrop-blur-md flex items-center justify-center text-white text-xl shadow-lg shadow-cyan-500/20 transition-all duration-300 hover:scale-110 hover:shadow-cyan-400/60 hover:-translate-y-1">
+                <FaFacebookF className="transition-all duration-300 group-hover:text-cyan-300" />
+              </div>
+            </a>
+
+            <a
+              href="https://x.com/Kyachingprue369"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group"
+            >
+              <div className="w-12 h-12 rounded-full border border-white/10 bg-white/5 backdrop-blur-md flex items-center justify-center text-white text-xl shadow-lg shadow-blue-500/20 transition-all duration-300 hover:scale-110 hover:shadow-blue-400/60 hover:-translate-y-1">
+                <FaTwitter className="transition-all duration-300 group-hover:text-blue-300" />
+              </div>
+            </a>
+
+            <a
+              href="https://www.linkedin.com/in/kyachingpruemarma/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group"
+            >
+              <div className="w-12 h-12 rounded-full border border-white/10 bg-white/5 backdrop-blur-md flex items-center justify-center text-white text-xl shadow-lg shadow-indigo-500/20 transition-all duration-300 hover:scale-110 hover:shadow-indigo-400/60 hover:-translate-y-1">
+                <FaLinkedinIn className="transition-all duration-300 group-hover:text-indigo-300" />
+              </div>
+            </a>
+
+            <a
+              href="https://github.com/kyachingprue"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group"
+            >
+              <div className="w-12 h-12 rounded-full border border-white/10 bg-white/5 backdrop-blur-md flex items-center justify-center text-white text-xl shadow-lg shadow-gray-500/20 transition-all duration-300 hover:scale-110 hover:shadow-white/50 hover:-translate-y-1">
+                <FaGithub className="transition-all duration-300 group-hover:text-gray-300" />
+              </div>
+            </a>
+          </div>
+
+          {/* Buttons */}
+          <div className="flex flex-row gap-4 mt-10">
+            {/* View Projects Button */}
+            <a
+              href="#projects"
+              className="group relative overflow-hidden px-8 py-4 rounded-full font-semibold text-white bg-linear-to-r from-green-600 via-cyan-900 to-blue-700 shadow-lg shadow-cyan-500/20 transition-all duration-500 hover:scale-105 hover:shadow-cyan-400/50 hover:-translate-y-1"
+            >
+              <span className="relative z-10 flex items-center justify-center gap-2">
+                View Projects
+              </span>
+
+              <span className="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition-all duration-500"></span>
+            </a>
+
+            {/* Learn More Button */}
+            <a
+              href="#about"
+              className="group relative overflow-hidden px-8 py-4 rounded-full border border-cyan-400/30 text-gray-200 backdrop-blur-md bg-white/5 shadow-lg shadow-cyan-500/10 transition-all duration-500 hover:scale-105 hover:shadow-cyan-400/40 hover:border-cyan-300 hover:-translate-y-1"
+            >
+              <span className="relative z-10 flex items-center justify-center gap-2">
+                Learn More
+              </span>
+
+              <span className="absolute inset-0 bg-cyan-400/10 opacity-0 group-hover:opacity-100 transition-all duration-500"></span>
+            </a>
+          </div>
+
+          {/* Mobile CV Button */}
           <a
             href="/kyachingprue_cv.pdf"
             download
-            className="sm:hidden inline-flex items-center my-5 gap-2 px-5 py-2.5 rounded-xl bg-linear-to-r from-blue-600 to-indigo-600
-          text-white font-medium shadow-lg shadow-blue-500/20 hover:from-blue-500 hover:to-indigo-500 hover:shadow-xl hover:shadow-blue-500/30      hover:-translate-y-0.5 transition-all duration-300"
+            className="sm:hidden inline-flex items-center justify-center mt-8 gap-2 px-6 py-3 rounded-full bg-linear-to-r from-blue-600 to-indigo-600 text-white font-medium shadow-lg shadow-blue-500/20 hover:from-blue-500 hover:to-indigo-500 hover:shadow-blue-500/40 hover:-translate-y-1 transition-all duration-300"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="w-7 h-7"
+              className="w-6 h-6"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
             >
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
-                d="M12 16v-8m0 8l-3-3m3 3l3-3M5 20h14" />
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M12 16v-8m0 8l-3-3m3 3l3-3M5 20h14"
+              />
             </svg>
-
             Download CV
           </a>
         </div>
@@ -74,10 +180,11 @@ const Header = () => {
             transition={{ duration: 0.6 }}
           >
             {/* Animated Gradient Border */}
-            <div className="absolute w-67.5 h-67.5 md:w-85 md:h-85 rounded-full
+            <div
+              className="absolute w-67.5 h-67.5 md:w-85 md:h-85 rounded-full
     bg-linear-to-r from-purple-500 via-pink-500 to-blue-500
-    animate-spin-slow blur-sm opacity-80">
-            </div>
+    animate-spin-slow blur-sm opacity-80"
+            ></div>
             {/* Image */}
             <motion.img
               src="https://i.ibb.co.com/xSyPdjQZ/new-generate-image-1.png"
@@ -85,7 +192,7 @@ const Header = () => {
               className="w-64 h-64 md:w-80 md:h-80 rounded-full object-cover
     border-4 border-white z-10 shadow-2xl bg-gray-400"
               whileHover={{ scale: 1.05 }}
-              transition={{ type: "spring", stiffness: 200 }}
+              transition={{ type: 'spring', stiffness: 200 }}
             />
           </motion.div>
 
@@ -140,7 +247,7 @@ const Header = () => {
         </div>
       </div>
     </section>
-  );
+  )
 };
 
 export default Header;
