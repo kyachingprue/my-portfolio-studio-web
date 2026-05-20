@@ -45,7 +45,7 @@ const Banner = () => {
             </Link>
 
             <a
-              href="#contact"
+              href="/contact-me"
               className="inline-flex items-center gap-2 px-6 py-3 rounded-xl border border-white/20 text-white hover:bg-white/10 transition"
             >
               Hire Me

@@ -28,11 +28,9 @@ const Header = () => {
   });
 
   return (
-    <header
-      className="relative min-h-screen overflow-hidden bg-linear-to-br from-black via-[#37066b] via-[#38103d] to-[#07152e]"
-    >
+    <header className="relative min-h-screen overflow-hidden bg-linear-to-br from-black via-[#37066b] via-[#38103d] to-[#07152e]">
       {/* Background Effect */}
-      <div className="absolute inset-0 z-0 w-full h-full">
+      <div className="absolute inset-0 z-0 w-full h-full pointer-events-none will-change-transform">
         <LaserFlow
           horizontalSizing={2.5}
           verticalSizing={3.5}
@@ -139,7 +137,7 @@ const Header = () => {
             <div className="flex flex-row gap-2 justify-evenly md:justify-start lg:gap-4 mt-10">
               {/* View Projects Button */}
               <a
-                href="#projects"
+                href="/projects"
                 className="group relative overflow-hidden px-4 lg:px-8 py-4 rounded-full font-semibold text-white bg-linear-to-r from-green-600 via-cyan-900 to-blue-700 shadow-lg shadow-cyan-500/20 transition-all duration-500 hover:scale-105 hover:shadow-cyan-400/50 hover:-translate-y-1"
               >
                 <span className="relative z-10 flex items-center justify-center gap-2">
