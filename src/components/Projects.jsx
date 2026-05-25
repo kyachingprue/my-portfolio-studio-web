@@ -88,6 +88,15 @@ const nextProjects = [
     image: 'https://i.ibb.co.com/CKxPTVss/Screenshot-2026-03-18-012913.png',
     live: 'https://ai-document-analysis.vercel.app/',
     github_link: 'https://github.com/kyachingprue/multi-document-analysis'
+  },
+  {
+    name: 'ShopNest eCommerce Platform',
+    category: 'Next.js & Full Stack Modern eCommerce Application',
+    description:
+      'A modern full-stack eCommerce platform built for seamless online shopping experiences. Features dynamic product browsing, category filtering, shopping cart functionality, secure authentication, responsive design, and a clean modern user interface optimized for all devices.',
+    image: 'https://i.ibb.co/4Zm6H0sx/Screenshot-2026-05-25-232034.png',
+    live: 'https://shop-nest-app.vercel.app/',
+    github_link: 'https://github.com/kyachingprue/next-ecommerce-website'
   }
 ]
 
