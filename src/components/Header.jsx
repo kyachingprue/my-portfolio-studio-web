@@ -30,7 +30,7 @@ const Header = () => {
   return (
     <header className="relative min-h-screen overflow-hidden bg-linear-to-br from-black via-[#37066b] via-[#38103d] to-[#07152e]">
       {/* Background Effect */}
-      <div className="absolute inset-0 z-0 w-full h-full pointer-events-none will-change-transform">
+      <div className="absolute inset-0 z-0 w-full h-full md:h-240 lg:h-270 pointer-events-none will-change-transform">
         <LaserFlow
           horizontalSizing={2.5}
           verticalSizing={3.5}
@@ -196,15 +196,15 @@ const Header = () => {
               {/* Animated Gradient Border */}
               <div
                 className="absolute w-67.5 h-67.5 md:w-85 md:h-85 rounded-full
-    bg-linear-to-r from-purple-500 via-pink-500 to-blue-500
-    animate-spin-slow blur-sm opacity-80"
+                bg-linear-to-r from-purple-500 via-pink-500 to-blue-500
+                animate-spin-slow blur-sm opacity-80"
               ></div>
               {/* Image */}
               <motion.img
-                src="https://i.ibb.co.com/xSyPdjQZ/new-generate-image-1.png"
+                src="https://i.ibb.co.com/vCTZWF70/Chat-GPT-Image-Jul-19-2026-10-31-29-AM.png"
                 alt="Kyachingprue Marma"
                 className="w-64 h-64 md:w-80 md:h-80 rounded-full object-cover
-    border-4 border-white z-10 shadow-2xl bg-gray-400"
+                 border-4 border-white z-10 shadow-2xl bg-gray-400"
                 whileHover={{ scale: 1.05 }}
                 transition={{ type: 'spring', stiffness: 200 }}
               />
