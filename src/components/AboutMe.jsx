@@ -1,5 +1,6 @@
 import { motion } from 'motion/react'
 import { FaCode, FaLaptopCode, FaDatabase, FaRocket } from 'react-icons/fa'
+import LineBounce from './LineBounce'
 
 const journeyData = [
   {
@@ -36,8 +37,9 @@ export default function AboutMe() {
   return (
     <section
       id="about"
-      className="relative overflow-hidden py-24 px-4 sm:px-6 lg:px-10"
+      className="relative overflow-hidden pb-20 px-4 sm:px-6 lg:px-10"
     >
+      <LineBounce/>
       {/* Background Blur Effects */}
       <div className="absolute top-0 left-0 w-72 h-72 bg-cyan-500/10 blur-3xl rounded-full"></div>
 
