@@ -7,7 +7,7 @@ const projects = [
     category: 'MERN E-Commerce Platform',
     description:
       'A full-featured MERN stack e-commerce platform with secure payments, authentication, admin dashboard, real-time data fetching, and modern UI animations.',
-    image: 'https://i.ibb.co.com/fzncRzph/Screenshot-2026-05-09-223019.png',
+    image: 'https://i.ibb.co.com/6RCyQb30/green-basket-website-logo.png',
     live: 'https://green-basket-website.vercel.app/',
     github_client: 'https://github.com/kyachingprue/my-ecommerce-client',
     github_server: 'https://github.com/kyachingprue/my-ecommerce-server'
