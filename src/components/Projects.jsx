@@ -1,5 +1,6 @@
 import { motion } from 'motion/react'
 import { Github, Layers, Globe, FileBraces } from 'lucide-react'
+import { Link } from 'react-router-dom'
 
 const projects = [
   {
@@ -147,7 +148,7 @@ export default function Projects() {
               <img
                 src={project.image}
                 alt={project.name}
-                className="w-full h-56 p-2 md:p-4 lg:p5 object-cover"
+                className="w-full h-64 rounded-md p-2 md:p-4 object-cover"
               />
 
               {/* Content */}
@@ -164,14 +165,14 @@ export default function Projects() {
                   {project.description}
                 </p>
                 {/* Links */}
-                <div className="flex flex-wrap items-center gap-4 pt-4">
+                <div className="flex flex-wrap justify-between items-center gap-4 pt-4">
                   <a
                     href={project.live}
                     target="_blank"
-                    className="flex items-center gap-2 text-sm text-emerald-400 hover:underline"
+                    className="flex items-center gap-2 text-sm text-cyan-500 hover:underline"
                   >
                     <Globe size={18} />
-                    Live
+                    Live Link
                   </a>
 
                   <a
@@ -223,13 +224,15 @@ export default function Projects() {
               <img
                 src={project.image}
                 alt={project.name}
-                className="w-full h-56 p-2 md:p-4 lg:p5 object-cover"
+                className="w-full h-64 p-2 md:p-4 object-cover"
               />
 
               {/* Content */}
-              <div className="p-4 space-y-4">
+              <div className="p-4 space-y-2">
                 <div>
-                  <h3 className="text-2xl font-semibold">{project.name}</h3>
+                    <h3 className="text-2xl hover:text-blue-600 hover:underline font-semibold">
+                      {project.name}
+                    </h3>
                   <p className="text-sm text-emerald-400 flex items-center gap-2 mt-1">
                     <Layers size={16} />
                     {project.category}
@@ -240,14 +243,14 @@ export default function Projects() {
                   {project.description}
                 </p>
                 {/* Links */}
-                <div className="flex flex-wrap items-center gap-4 pt-4">
+                <div className="flex justify-between items-center gap-4 pt-4">
                   <a
                     href={project.live}
                     target="_blank"
-                    className="flex items-center gap-2 text-sm text-emerald-400 hover:underline"
+                    className="flex items-center gap-2 text-sm text-cyan-300 hover:underline"
                   >
                     <Globe size={18} />
-                    Live
+                    Live Link
                   </a>
 
                   <a
