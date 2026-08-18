@@ -23,10 +23,10 @@ const Navbar = () => {
   return (
     <nav
       className={`w-full top-0 left-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'fixed bg-black/50 shadow-lg' : 'absolute bg-black/50'
+        isScrolled ? 'fixed bg-black/80 shadow-lg' : 'absolute bg-black/80'
       }`}
     >
-      <div className="max-w-7xl mx-auto flex justify-between items-center p-4 text-white">
+      <div className="max-w-7xl mx-auto flex justify-between items-center py-4 text-white">
         {/* Left Side */}
         <div className="text-xl md:text-3xl font-bold">
           <Link

@@ -103,7 +103,7 @@ const nextProjects = [
 
 export default function Projects() {
   return (
-    <section className="py-20 bg-linear-to-b from-slate-950 to-slate-900 text-white">
+    <section className="py-20 bg-linear-to-br from-slate-950 via-purple-950 to-slate-950 text-white">
       <div className="max-w-7xl mx-auto px-6">
         {/* Section Header */}
         <motion.div
@@ -142,7 +142,7 @@ export default function Projects() {
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.15 }}
-              className="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden shadow-lg hover:border-emerald-500 transition"
+              className="bg-black border border-slate-800 rounded-2xl overflow-hidden shadow-lg hover:border-emerald-500 transition"
             >
               {/* Image */}
               <img
@@ -218,7 +218,7 @@ export default function Projects() {
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.15 }}
-              className="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden shadow-lg hover:border-emerald-500 transition"
+              className="bg-black border border-slate-800 rounded-2xl overflow-hidden shadow-lg hover:border-emerald-500 transition"
             >
               {/* Image */}
               <img
@@ -230,9 +230,9 @@ export default function Projects() {
               {/* Content */}
               <div className="p-4 space-y-2">
                 <div>
-                    <h3 className="text-2xl hover:text-blue-600 hover:underline font-semibold">
-                      {project.name}
-                    </h3>
+                  <h3 className="text-2xl hover:text-blue-600 hover:underline font-semibold">
+                    {project.name}
+                  </h3>
                   <p className="text-sm text-emerald-400 flex items-center gap-2 mt-1">
                     <Layers size={16} />
                     {project.category}
