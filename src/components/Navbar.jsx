@@ -26,7 +26,7 @@ const Navbar = () => {
         isScrolled ? 'fixed bg-black/80 shadow-lg' : 'absolute bg-black/80'
       }`}
     >
-      <div className="max-w-7xl mx-auto flex justify-between items-center py-4 text-white">
+      <div className="max-w-7xl mx-auto flex justify-between items-center px-4 md:px-2 lg:px-0 py-4 text-white">
         {/* Left Side */}
         <div className="text-xl md:text-3xl font-bold">
           <Link
