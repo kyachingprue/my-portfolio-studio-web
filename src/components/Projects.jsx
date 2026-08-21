@@ -18,7 +18,7 @@ const projects = [
     category: 'Programming Course Platform',
     description:
       'An online programming course platform with authentication, structured courses, and interactive UI. Video streaming is limited due to low-range Render server constraints.',
-    image: 'https://i.ibb.co.com/prNgz6PY/1673755852454.jpg',
+    image: 'https://i.ibb.co.com/PGV2Lmmj/Code-Trail-08-21-2026-09-02-AM.png',
     live: 'https://school-mate-auth.web.app/',
     github_client: 'https://github.com/kyachingprue/code-trail-frontend',
     github_server: 'https://github.com/kyachingprue/code-trail-backend'
