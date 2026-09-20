@@ -16,6 +16,7 @@ import { useEffect, useState } from "react";
 import ExtraFeature from "../components/ExtraFeature";
 import ScientistNetwork from "../components/ScientistNetwork";
 import ContactProgrammingCart from "../components/ContactProgrammingCart";
+import LineBounce from "@/components/LineBounce";
 
 const techStack = [
   "MERN Stack",
@@ -92,12 +93,18 @@ export default function Contact() {
             </div>
 
             <div className="flex justify-center md:justify-start items-center gap-4">
-              <Social icon={<Github />} link="https://github.com/kyachingprue" />
+              <Social
+                icon={<Github />}
+                link="https://github.com/kyachingprue"
+              />
               <Social
                 icon={<Facebook />}
                 link="https://www.facebook.com/kyaching.prue.marma.2025"
               />
-              <Social icon={<Linkedin />} link="https://www.linkedin.com/in/kyachingpruemarma/" />
+              <Social
+                icon={<Linkedin />}
+                link="https://www.linkedin.com/in/kyachingpruemarma/"
+              />
             </div>
 
             <div className="pt-4">
@@ -130,11 +137,13 @@ export default function Contact() {
 
             {/* Availability */}
             <div className="flex items-center gap-3">
-              <Activity className={available ? "text-green-400" : "text-red-400"} />
+              <Activity
+                className={available ? 'text-green-400' : 'text-red-400'}
+              />
               <span className="text-slate-300">
-                Status:{" "}
-                <span className={available ? "text-green-400" : "text-red-400"}>
-                  {available ? "Available for Work" : "Currently Busy"}
+                Status:{' '}
+                <span className={available ? 'text-green-400' : 'text-red-400'}>
+                  {available ? 'Available for Work' : 'Currently Busy'}
                 </span>
               </span>
             </div>
@@ -149,22 +158,32 @@ export default function Contact() {
 
             {/* 🚀 ADVANCED DEVELOPER INSIGHTS */}
             <div className="pt-6 space-y-5">
-
               {/* Tech Stack */}
               <div>
-                <p className="text-sm text-slate-400 mb-2">Current Tech Stack</p>
+                <p className="text-sm text-slate-400 mb-2">
+                  Current Tech Stack
+                </p>
                 <div className="flex flex-wrap gap-2">
-                  {["React","Next.js","TypeScript", "Node.js", "MongoDB", "PostgressSQL","Shadcn UI", "Tailwind", "JWT", "Firebase"].map(
-                    (tech, i) => (
-                      <motion.span
-                        key={i}
-                        whileHover={{ scale: 1.1 }}
-                        className="px-3 py-1 text-xs rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-300"
-                      >
-                        {tech}
-                      </motion.span>
-                    )
-                  )}
+                  {[
+                    'React',
+                    'Next.js',
+                    'TypeScript',
+                    'Node.js',
+                    'MongoDB',
+                    'PostgressSQL',
+                    'Shadcn UI',
+                    'Tailwind',
+                    'JWT',
+                    'Firebase'
+                  ].map((tech, i) => (
+                    <motion.span
+                      key={i}
+                      whileHover={{ scale: 1.1 }}
+                      className="px-3 py-1 text-xs rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-300"
+                    >
+                      {tech}
+                    </motion.span>
+                  ))}
                 </div>
               </div>
 
@@ -172,7 +191,7 @@ export default function Contact() {
               <div className="flex items-center gap-3">
                 <Code2 className="text-purple-400" />
                 <span className="text-slate-300">
-                  Coding Mode:{" "}
+                  Coding Mode:{' '}
                   <span className="text-purple-400 font-medium">
                     Deep Focus 🚀
                   </span>
@@ -183,8 +202,10 @@ export default function Contact() {
               <div className="flex items-center gap-3">
                 <Cpu className="text-cyan-400" />
                 <span className="text-slate-300">
-                  Environment:{" "}
-                  <span className="text-cyan-400">MERN-Stack • Full-Stack • Vite • VS Code</span>
+                  Environment:{' '}
+                  <span className="text-cyan-400">
+                    MERN-Stack • Full-Stack • Vite • VS Code
+                  </span>
                 </span>
               </div>
 
@@ -192,7 +213,7 @@ export default function Contact() {
               <div className="flex items-center gap-3">
                 <Brain className="text-pink-400" />
                 <span className="text-slate-300">
-                  Problem Solving:{" "}
+                  Problem Solving:{' '}
                   <span className="text-pink-400">DSA + Real Projects</span>
                 </span>
               </div>
@@ -200,11 +221,12 @@ export default function Contact() {
           </motion.div>
         </div>
       </section>
+      <LineBounce />
       <ExtraFeature />
       <ScientistNetwork />
-      <ContactProgrammingCart/>
-   </div>
-  );
+      <ContactProgrammingCart />
+    </div>
+  )
 }
 
 
