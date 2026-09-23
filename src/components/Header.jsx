@@ -203,6 +203,7 @@ const Header = () => {
               <motion.img
                 src="https://i.ibb.co.com/vCTZWF70/Chat-GPT-Image-Jul-19-2026-10-31-29-AM.png"
                 alt="Kyachingprue Marma"
+                loading="lazy"
                 className="w-64 h-64 md:w-80 md:h-80 rounded-full object-cover
                  border-4 border-white z-10 shadow-2xl bg-gray-400"
                 whileHover={{ scale: 1.05 }}
