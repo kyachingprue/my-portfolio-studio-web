@@ -10,8 +10,7 @@ const productData = [
     type: 'Landing Page',
     description:
       'A modern staffing and recruitment landing website designed with a professional business-focused interface, responsive layouts, and polished visual sections.',
-    image:
-      'https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1200&q=80',
+    image: 'https://i.ibb.co.com/N22zq4mY/antixor-website-banner.png',
     liveUrl: 'https://antixor-website.vercel.app/',
     githubUrl: '',
     technologies: [
@@ -37,7 +36,7 @@ const productData = [
     description:
       'A professional employer staffing website focused on recruitment services, business presentation, responsive layouts, and clean user experience.',
     image:
-      'https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1200&q=80',
+      'https://i.ibb.co.com/x8qyc68R/employer-Overview-Vercel-09-24-2026-09-10-AM.png',
     liveUrl: 'https://employer-rho.vercel.app/',
     githubUrl: '',
     technologies: [
@@ -63,7 +62,7 @@ const productData = [
     description:
       'A modern AI platform interface featuring a futuristic visual style, responsive sections, modern navigation, and product-focused presentation.',
     image:
-      'https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=1200&q=80',
+      'https://i.ibb.co.com/QZc256d/nexora-ai-platform-Overview-Vercel-09-24-2026-09-11-AM.png',
     liveUrl: 'https://nexora-ai-platform-sigma.vercel.app/',
     githubUrl: '',
     technologies: [
@@ -89,7 +88,7 @@ const productData = [
     description:
       'A responsive travel and flight booking style website designed with a modern travel-focused interface and user-friendly content sections.',
     image:
-      'https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=1200&q=80',
+      'https://i.ibb.co.com/RkfTX4J4/flights-travel-web-Overview-Vercel-09-24-2026-09-12-AM.png',
     liveUrl: 'https://flights-travel-web.vercel.app/',
     githubUrl: '',
     technologies: [
@@ -115,7 +114,7 @@ const productData = [
     description:
       'A modern real estate and home service website featuring property-focused presentation, service sections, responsive design, and professional UI.',
     image:
-      'https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=1200&q=80',
+      'https://i.ibb.co.com/5WspPzcn/realestate-home-service-Overview-Vercel-09-24-2026-09-14-AM.png',
     liveUrl: 'https://realestate-home-service.vercel.app/',
     githubUrl: '',
     technologies: [
@@ -141,7 +140,7 @@ const productData = [
     description:
       'A modern transportation and taxi website concept with a clean visual identity, responsive sections, service presentation, and engaging user interface.',
     image:
-      'https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?auto=format&fit=crop&w=1200&q=80',
+      'https://i.ibb.co.com/M5cHpDQ8/antixor-texi-enu-Overview-Vercel-09-24-2026-09-15-AM.png',
     liveUrl: 'https://antixor-texi-enu.vercel.app/',
     githubUrl: '',
     technologies: [
@@ -167,7 +166,7 @@ const productData = [
     description:
       'A cinematic movie-focused web experience with a visually rich interface, responsive layout, and entertainment-oriented user experience.',
     image:
-      'https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=1200&q=80',
+      'https://i.ibb.co.com/spBQ8mtT/cineora-web-Overview-Vercel-09-24-2026-09-17-AM.png',
     liveUrl: 'https://cineora-web-ochre.vercel.app/',
     githubUrl: '',
     technologies: [
@@ -193,7 +192,7 @@ const productData = [
     description:
       'A community and society website concept with structured sections, modern cards, responsive layouts, and a clean professional interface.',
     image:
-      'https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=1200&q=80',
+      'https://i.ibb.co.com/C5MP0KgT/my-society-website-Overview-Vercel-09-24-2026-09-20-AM.png',
     liveUrl: 'https://my-society-website.vercel.app/',
     githubUrl: '',
     technologies: [
@@ -245,7 +244,7 @@ const productData = [
     description:
       'A creative animation-focused web project using expressive emoji visuals, interactive motion, modern layouts, and responsive design.',
     image:
-      'https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=1200&q=80',
+      'https://i.ibb.co.com/kgTYYVzm/animation-emoji-landing-project-09-24-2026-09-22-AM.png',
     liveUrl: 'https://animation-emoji-web.vercel.app/',
     githubUrl: '',
     technologies: [
@@ -271,7 +270,7 @@ const productData = [
     description:
       'A healthcare and medical website concept with a clean professional interface, service-focused sections, responsive layout, and accessible visual structure.',
     image:
-      'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1200&q=80',
+      'https://i.ibb.co.com/GfWQ2Php/nava-medicare-web-Overview-Vercel-09-24-2026-09-24-AM.png',
     liveUrl: 'https://nava-medicare-web.vercel.app/',
     githubUrl: '',
     technologies: [
@@ -297,7 +296,7 @@ const productData = [
     description:
       'An interactive animation-based web application focused on motion, visual effects, smooth transitions, and modern responsive UI.',
     image:
-      'https://images.unsplash.com/photo-1558655146-9f40138edfeb?auto=format&fit=crop&w=1200&q=80',
+      'https://i.ibb.co.com/7tqqvVLB/animation-web-app-Overview-Vercel-09-24-2026-09-25-AM.png',
     liveUrl: 'https://animation-webapp.vercel.app/',
     githubUrl: '',
     technologies: [
@@ -349,7 +348,7 @@ const productData = [
     description:
       'A modern SaaS-style landing page focused on clean typography, structured content, modern visual hierarchy, and responsive user experience.',
     image:
-      'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80',
+      'https://i.ibb.co.com/tTJsfpQK/simplify-web-Overview-Vercel-09-24-2026-09-27-AM.png',
     liveUrl: 'https://simplify-web.vercel.app/',
     githubUrl: '',
     technologies: [
@@ -375,7 +374,7 @@ const productData = [
     description:
       'A visually engaging anime-themed web experience with creative layouts, modern visuals, animations, and responsive presentation.',
     image:
-      'https://images.unsplash.com/photo-1578632767115-351597cf2477?auto=format&fit=crop&w=1200&q=80',
+      'https://i.ibb.co.com/Fb3W4Wm1/orbit-anime-web-Overview-Vercel-09-24-2026-09-28-AM.png',
     liveUrl: 'https://orbit-anime-web.vercel.app/',
     githubUrl: '',
     technologies: [
@@ -401,7 +400,7 @@ const productData = [
     description:
       'A modern automotive website focused on car presentation, visually rich sections, responsive layouts, and a professional automotive user experience.',
     image:
-      'https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=1200&q=80',
+      'https://i.ibb.co.com/9HPPXDY3/motorix-car-web-Overview-Vercel-09-24-2026-09-29-AM.png',
     liveUrl: 'https://motorix-car-web.vercel.app/',
     githubUrl: '',
     technologies: [
@@ -423,7 +422,7 @@ const productData = [
     description:
       'A modern e-commerce web application with a clean shopping experience, product browsing, category-based navigation, and responsive user interface.',
     image:
-      'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=1200&q=80',
+      'https://i.ibb.co.com/N2RYcZjG/green-basket-website-Overview-Vercel-09-24-2026-09-30-AM.png',
     liveUrl: 'https://green-basket-website.vercel.app/',
     githubUrl: '',
     clientUrl: 'https://green-basket-website.vercel.app/',
@@ -449,7 +448,7 @@ const productData = [
     description:
       'A freelance job marketplace platform designed to connect clients and freelancers through a modern and responsive web interface.',
     image:
-      'https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1200&q=80',
+      'https://i.ibb.co.com/4nfNq333/freelance-job-website-client-Overview-Vercel-09-24-2026-09-31-AM.png',
     liveUrl: 'https://freelance-job-website-client.vercel.app/',
     githubUrl: '',
     clientUrl: 'https://freelance-job-website-client.vercel.app/',
@@ -475,7 +474,7 @@ const productData = [
     description:
       'A modern travel platform focused on presenting travel destinations, experiences, and travel-related content through an engaging responsive interface.',
     image:
-      'https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1200&q=80',
+      'https://i.ibb.co.com/0j4LTqxn/go-explore-travel-studio-client-Overview-Vercel-09-24-2026-09-33-AM.png',
     liveUrl: 'https://go-explore-travel-studio-client.vercel.app/',
     githubUrl: '',
     clientUrl: 'https://go-explore-travel-studio-client.vercel.app/',
@@ -501,7 +500,7 @@ const productData = [
     description:
       'A modern e-commerce platform built with a responsive shopping experience, product browsing, category pages, deals, and detailed product views.',
     image:
-      'https://images.unsplash.com/photo-1556740749-887f6717d7e4?auto=format&fit=crop&w=1200&q=80',
+      'https://i.ibb.co.com/qMDKVzqm/shop-nest-app-Overview-Vercel-09-24-2026-09-34-AM.png',
     liveUrl: 'https://shop-nest-app.vercel.app/',
     githubUrl: '',
     clientUrl: 'https://shop-nest-app.vercel.app/',
@@ -526,7 +525,7 @@ const productData = [
     description:
       'A personal developer portfolio website created to showcase professional skills, projects, technologies, and development experience through a modern responsive design.',
     image:
-      'https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?auto=format&fit=crop&w=1200&q=80',
+      'https://i.ibb.co.com/LzV8tkRz/my-portfolio-web-Overview-Vercel-09-24-2026-09-34-AM.png',
     liveUrl: 'https://my-portfolio-web-three-chi.vercel.app/',
     githubUrl: '',
     clientUrl: 'https://my-portfolio-web-three-chi.vercel.app/',
@@ -551,7 +550,7 @@ const productData = [
     description:
       'An AI-focused SaaS dashboard interface designed with a modern application layout, analytics-style sections, and a responsive user experience.',
     image:
-      'https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=1200&q=80',
+      'https://i.ibb.co.com/jkb1dSfG/Aether-AI-Home-page-09-24-2026-09-37-AM.png',
     liveUrl: 'https://aetheraiwebsite.vercel.app/',
     githubUrl: '',
     clientUrl: 'https://aetheraiwebsite.vercel.app/',
@@ -577,7 +576,7 @@ const productData = [
     description:
       'A freelance job platform concept featuring a professional interface for browsing freelance opportunities and connecting users with job-related services.',
     image:
-      'https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=1200&q=80',
+      'https://i.ibb.co.com/W4yhgyqW/freelancing-job-website-09-24-2026-09-41-AM.png',
     liveUrl: 'https://freelancing-job-website.vercel.app/',
     githubUrl: '',
     clientUrl: 'https://freelancing-job-website.vercel.app/',
@@ -603,7 +602,7 @@ const productData = [
     description:
       'An AI-powered document analysis platform designed around document processing and intelligent analysis through a modern web application interface.',
     image:
-      'https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=1200&q=80',
+      'https://i.ibb.co.com/wZPpyFS9/ai-document-analysis-Overview-Vercel-09-24-2026-09-42-AM.png',
     liveUrl: 'https://ai-document-analysis.vercel.app/',
     githubUrl: '',
     clientUrl: 'https://ai-document-analysis.vercel.app/',
@@ -681,7 +680,7 @@ const productData = [
     description:
       'A modern chat application interface designed for real-time communication with a clean conversation layout and responsive user experience.',
     image:
-      'https://images.unsplash.com/photo-1577563908411-5077b6dc7624?auto=format&fit=crop&w=1200&q=80',
+      'https://i.ibb.co.com/YF282qR5/chatflow-chat-studio-Overview-Vercel-09-24-2026-09-44-AM.png',
     liveUrl: 'https://chatflow-chat-studio.vercel.app/',
     githubUrl: '',
     clientUrl: 'https://chatflow-chat-studio.vercel.app/',
