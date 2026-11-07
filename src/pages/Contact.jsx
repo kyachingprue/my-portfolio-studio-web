@@ -16,7 +16,6 @@ import { useEffect, useState } from "react";
 import ExtraFeature from "../components/ExtraFeature";
 import ScientistNetwork from "../components/ScientistNetwork";
 import ContactProgrammingCart from "../components/ContactProgrammingCart";
-import LineBounce from "@/components/LineBounce";
 
 const techStack = [
   "MERN Stack",
@@ -221,7 +220,6 @@ export default function Contact() {
           </motion.div>
         </div>
       </section>
-      <LineBounce />
       <ExtraFeature />
       <ScientistNetwork />
       <ContactProgrammingCart />

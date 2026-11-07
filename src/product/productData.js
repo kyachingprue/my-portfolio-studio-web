@@ -1,420 +1,61 @@
 const productData = [
-  // =====================================================
-  // 01. ANTIXOR STAFFING
-  // =====================================================
   {
-    id: 1,
-    title: 'Antixor Staffing',
-    slug: 'antixor-staffing',
-    category: 'Frontend Website Projects',
-    type: 'Landing Page',
-    description:
-      'A modern staffing and recruitment landing website designed with a professional business-focused interface, responsive layouts, and polished visual sections.',
-    image: 'https://i.ibb.co.com/N22zq4mY/antixor-website-banner.png',
-    liveUrl: 'https://antixor-website.vercel.app/',
-    githubUrl: '',
-    technologies: [
-      'React',
-      'JavaScript',
-      'Tailwind CSS',
-      'Responsive Design',
-      'Modern UI'
-    ],
-    featured: true,
-    year: '2026'
-  },
-
-  // =====================================================
-  // 02. EMPLOYER STAFFING
-  // =====================================================
+  id: 1,
+  title: 'Nova AI',
+  slug: 'nova-ai',
+  category: 'Full-Stack WebApp/Website Projects',
+  type: 'AI-Powered SaaS Web Application',
+  description:
+    'A modern AI-powered web application designed to deliver intelligent assistance through an interactive and user-friendly interface. Nova AI provides AI-powered conversations, intelligent content generation, and smart productivity features. Built with a modern full-stack architecture, it focuses on seamless user experiences, secure authentication, responsive design, and scalable AI integration.',
+  image: 'https://res.cloudinary.com/dczi5wwkj/image/upload/f_auto/q_auto/nova-ai-Overview-_-Vercel-11-07-2026_10_43_PM_hfkbrd.png',
+  liveUrl: 'https://nova-ai-kyaching.vercel.app/',
+  githubUrl: 'https://github.com/kyachingprue/nova-ai-web',
+  technologies: [
+    'Next.js',
+    'TypeScript',
+    'React',
+    'Tailwind CSS',
+    'PostgreSQL',
+    'Neon Database',
+    'Firebase Authentication',
+    'Google Gemini API',
+    'Stripe',
+    'JWT Authentication',
+    'Nodemailer',
+    'REST API'
+  ],
+  featured: true,
+  year: 2026
+},
   {
-    id: 2,
-    title: 'Employer Staffing',
-    slug: 'employer-staffing',
-    category: 'Landing Projects',
-    type: 'Business Website',
-    description:
-      'A professional employer staffing website focused on recruitment services, business presentation, responsive layouts, and clean user experience.',
-    image:
-      'https://i.ibb.co.com/x8qyc68R/employer-Overview-Vercel-09-24-2026-09-10-AM.png',
-    liveUrl: 'https://employer-rho.vercel.app/',
-    githubUrl: '',
-    technologies: [
-      'React',
-      'JavaScript',
-      'Tailwind CSS',
-      'Responsive Design',
-      'UI/UX'
-    ],
-    featured: true,
-    year: '2026'
-  },
-
-  // =====================================================
-  // 03. NEXORA AI
-  // =====================================================
+  id: 2,
+  title: 'Coding Campus',
+  slug: 'coding-campus',
+  category: 'Full-Stack WebApp/Website Projects',
+  type: 'Online Learning Management System (LMS)',
+  description:
+    'A modern full-stack online learning platform designed to make programming education accessible and engaging. It provides an interactive learning experience with course browsing, student enrollment, video-based lessons, instructor dashboards, course management, and responsive user interfaces. The platform helps students learn programming skills while allowing instructors to manage courses and educational content efficiently.',
+  image: 'https://res.cloudinary.com/dczi5wwkj/image/upload/f_auto/q_auto/coding-campus-Overview-_-Vercel-11-07-2026_10_41_PM_jajipq.png',
+  liveUrl: 'https://coding-campus.vercel.app/',
+  githubUrl: 'https://github.com/kyachingprue/coding-campus-frontend-project',
+  technologies: [
+    'React',
+    'JavaScript',
+    'Tailwind CSS',
+    'Node.js',
+    'Express.js',
+    'MongoDB',
+    'Firebase',
+    'JWT Authentication',
+    'Google Drive API',
+    'REST API',
+    'React Hot Toast'
+  ],
+  featured: true,
+  year: 2025
+},
   {
     id: 3,
-    title: 'Nexora AI Platform',
-    slug: 'nexora-ai-platform',
-    category: 'Frontend Website Projects',
-    type: 'AI Platform',
-    description:
-      'A modern AI platform interface featuring a futuristic visual style, responsive sections, modern navigation, and product-focused presentation.',
-    image:
-      'https://i.ibb.co.com/QZc256d/nexora-ai-platform-Overview-Vercel-09-24-2026-09-11-AM.png',
-    liveUrl: 'https://nexora-ai-platform-sigma.vercel.app/',
-    githubUrl: '',
-    technologies: [
-      'React',
-      'JavaScript',
-      'Tailwind CSS',
-      'AI UI',
-      'Responsive Design'
-    ],
-    featured: true,
-    year: '2026'
-  },
-
-  // =====================================================
-  // 04. FLIGHTS & TRAVEL
-  // =====================================================
-  {
-    id: 4,
-    title: 'Flights & Travel',
-    slug: 'flights-travel',
-    category: 'Frontend Website Projects',
-    type: 'Travel Website',
-    description:
-      'A responsive travel and flight booking style website designed with a modern travel-focused interface and user-friendly content sections.',
-    image:
-      'https://i.ibb.co.com/RkfTX4J4/flights-travel-web-Overview-Vercel-09-24-2026-09-12-AM.png',
-    liveUrl: 'https://flights-travel-web.vercel.app/',
-    githubUrl: '',
-    technologies: [
-      'React',
-      'JavaScript',
-      'Tailwind CSS',
-      'Travel UI',
-      'Responsive Design'
-    ],
-    featured: true,
-    year: '2026'
-  },
-
-  // =====================================================
-  // 05. REAL ESTATE HOME SERVICE
-  // =====================================================
-  {
-    id: 5,
-    title: 'Real Estate Home Service',
-    slug: 'real-estate-home-service',
-    category: 'Frontend Website Projects',
-    type: 'Real Estate Website',
-    description:
-      'A modern real estate and home service website featuring property-focused presentation, service sections, responsive design, and professional UI.',
-    image:
-      'https://i.ibb.co.com/5WspPzcn/realestate-home-service-Overview-Vercel-09-24-2026-09-14-AM.png',
-    liveUrl: 'https://realestate-home-service.vercel.app/',
-    githubUrl: '',
-    technologies: [
-      'React',
-      'JavaScript',
-      'Tailwind CSS',
-      'Real Estate UI',
-      'Responsive Design'
-    ],
-    featured: true,
-    year: '2026'
-  },
-
-  // =====================================================
-  // 06. ANTIXOR TAXI
-  // =====================================================
-  {
-    id: 6,
-    title: 'Antixor Taxi',
-    slug: 'antixor-taxi',
-    category: 'Frontend Website Projects',
-    type: 'Taxi Landing Page',
-    description:
-      'A modern transportation and taxi website concept with a clean visual identity, responsive sections, service presentation, and engaging user interface.',
-    image:
-      'https://i.ibb.co.com/M5cHpDQ8/antixor-texi-enu-Overview-Vercel-09-24-2026-09-15-AM.png',
-    liveUrl: 'https://antixor-texi-enu.vercel.app/',
-    githubUrl: '',
-    technologies: [
-      'React',
-      'JavaScript',
-      'Tailwind CSS',
-      'Responsive Design',
-      'Animation'
-    ],
-    featured: true,
-    year: '2026'
-  },
-
-  // =====================================================
-  // 07. CINEORA
-  // =====================================================
-  {
-    id: 7,
-    title: 'Cineora',
-    slug: 'cineora',
-    category: 'Frontend Website Projects',
-    type: 'Movie Website',
-    description:
-      'A cinematic movie-focused web experience with a visually rich interface, responsive layout, and entertainment-oriented user experience.',
-    image:
-      'https://i.ibb.co.com/spBQ8mtT/cineora-web-Overview-Vercel-09-24-2026-09-17-AM.png',
-    liveUrl: 'https://cineora-web-ochre.vercel.app/',
-    githubUrl: '',
-    technologies: [
-      'React',
-      'JavaScript',
-      'Tailwind CSS',
-      'Movie UI',
-      'Responsive Design'
-    ],
-    featured: true,
-    year: '2026'
-  },
-
-  // =====================================================
-  // 08. MY SOCIETY
-  // =====================================================
-  {
-    id: 8,
-    title: 'My Society',
-    slug: 'my-society',
-    category: 'Frontend Website Projects',
-    type: 'Community Website',
-    description:
-      'A community and society website concept with structured sections, modern cards, responsive layouts, and a clean professional interface.',
-    image:
-      'https://i.ibb.co.com/C5MP0KgT/my-society-website-Overview-Vercel-09-24-2026-09-20-AM.png',
-    liveUrl: 'https://my-society-website.vercel.app/',
-    githubUrl: '',
-    technologies: [
-      'React',
-      'JavaScript',
-      'Tailwind CSS',
-      'Responsive Design',
-      'Modern UI'
-    ],
-    featured: false,
-    year: '2026'
-  },
-
-  // =====================================================
-  // 09. REACT GALAXY
-  // =====================================================
-  {
-    id: 9,
-    title: 'React Galaxy',
-    slug: 'react-galaxy',
-    category: 'Landing Projects',
-    type: 'Creative Landing Page',
-    description:
-      'A creative React-themed landing experience with a futuristic visual direction, interactive sections, animations, and responsive design.',
-    image:
-      'https://images.unsplash.com/photo-1462331940025-496dfbfc7564?auto=format&fit=crop&w=1200&q=80',
-    liveUrl: 'https://react-galaxy-web.vercel.app/',
-    githubUrl: '',
-    technologies: [
-      'React',
-      'JavaScript',
-      'Tailwind CSS',
-      'Animation',
-      'Responsive Design'
-    ],
-    featured: false,
-    year: '2026'
-  },
-
-  // =====================================================
-  // 10. ANIMATION EMOJI
-  // =====================================================
-  {
-    id: 10,
-    title: 'Animation Emoji',
-    slug: 'animation-emoji',
-    category: 'Landing Projects',
-    type: 'Animation Landing Page',
-    description:
-      'A creative animation-focused web project using expressive emoji visuals, interactive motion, modern layouts, and responsive design.',
-    image:
-      'https://i.ibb.co.com/kgTYYVzm/animation-emoji-landing-project-09-24-2026-09-22-AM.png',
-    liveUrl: 'https://animation-emoji-web.vercel.app/',
-    githubUrl: '',
-    technologies: [
-      'React',
-      'JavaScript',
-      'CSS',
-      'Animation',
-      'Responsive Design'
-    ],
-    featured: false,
-    year: '2026'
-  },
-
-  // =====================================================
-  // 11. NOVA MEDICARE
-  // =====================================================
-  {
-    id: 11,
-    title: 'Nova Medicare',
-    slug: 'nova-medicare',
-    category: 'Frontend Website Projects',
-    type: 'Healthcare Website',
-    description:
-      'A healthcare and medical website concept with a clean professional interface, service-focused sections, responsive layout, and accessible visual structure.',
-    image:
-      'https://i.ibb.co.com/GfWQ2Php/nava-medicare-web-Overview-Vercel-09-24-2026-09-24-AM.png',
-    liveUrl: 'https://nava-medicare-web.vercel.app/',
-    githubUrl: '',
-    technologies: [
-      'React',
-      'JavaScript',
-      'Tailwind CSS',
-      'Healthcare UI',
-      'Responsive Design'
-    ],
-    featured: true,
-    year: '2026'
-  },
-
-  // =====================================================
-  // 12. ANIMATION WEBAPP
-  // =====================================================
-  {
-    id: 12,
-    title: 'Animation WebApp',
-    slug: 'animation-webapp',
-    category: 'Landing Projects',
-    type: 'Interactive WebApp',
-    description:
-      'An interactive animation-based web application focused on motion, visual effects, smooth transitions, and modern responsive UI.',
-    image:
-      'https://i.ibb.co.com/7tqqvVLB/animation-web-app-Overview-Vercel-09-24-2026-09-25-AM.png',
-    liveUrl: 'https://animation-webapp.vercel.app/',
-    githubUrl: '',
-    technologies: [
-      'React',
-      'JavaScript',
-      'CSS',
-      'Animation',
-      'Responsive Design'
-    ],
-    featured: false,
-    year: '2026'
-  },
-
-  // =====================================================
-  // 13. AI STUDIO
-  // =====================================================
-  {
-    id: 13,
-    title: 'AI Studio',
-    slug: 'ai-studio',
-    category: 'Full-Stack WebApp/Website Projects',
-    type: 'AI WebApp',
-    description:
-      'An AI-powered web application interface where users can interact with an AI assistant through a clean and simple conversational experience.',
-    image:
-      'https://images.unsplash.com/photo-1676299081847-824916de030a?auto=format&fit=crop&w=1200&q=80',
-    liveUrl: 'https://ai-studio-web-psi.vercel.app/',
-    githubUrl: '',
-    technologies: [
-      'React',
-      'JavaScript',
-      'AI API',
-      'API Integration',
-      'Responsive Design'
-    ],
-    featured: true,
-    year: '2026'
-  },
-
-  // =====================================================
-  // 14. SIMPLIFY
-  // =====================================================
-  {
-    id: 14,
-    title: 'Simplify',
-    slug: 'simplify',
-    category: 'Frontend Website Projects',
-    type: 'SaaS Landing Page',
-    description:
-      'A modern SaaS-style landing page focused on clean typography, structured content, modern visual hierarchy, and responsive user experience.',
-    image:
-      'https://i.ibb.co.com/tTJsfpQK/simplify-web-Overview-Vercel-09-24-2026-09-27-AM.png',
-    liveUrl: 'https://simplify-web.vercel.app/',
-    githubUrl: '',
-    technologies: [
-      'React',
-      'JavaScript',
-      'Tailwind CSS',
-      'SaaS UI',
-      'Responsive Design'
-    ],
-    featured: true,
-    year: '2026'
-  },
-
-  // =====================================================
-  // 15. ORBIT ANIME
-  // =====================================================
-  {
-    id: 15,
-    title: 'Orbit Anime',
-    slug: 'orbit-anime',
-    category: 'Landing Projects',
-    type: 'Anime Landing Page',
-    description:
-      'A visually engaging anime-themed web experience with creative layouts, modern visuals, animations, and responsive presentation.',
-    image:
-      'https://i.ibb.co.com/Fb3W4Wm1/orbit-anime-web-Overview-Vercel-09-24-2026-09-28-AM.png',
-    liveUrl: 'https://orbit-anime-web.vercel.app/',
-    githubUrl: '',
-    technologies: [
-      'React',
-      'JavaScript',
-      'Tailwind CSS',
-      'Animation',
-      'Responsive Design'
-    ],
-    featured: false,
-    year: '2026'
-  },
-
-  // =====================================================
-  // 16. MOTORIX
-  // =====================================================
-  {
-    id: 16,
-    title: 'Motorix',
-    slug: 'motorix',
-    category: 'Landing Projects',
-    type: 'Automotive Website',
-    description:
-      'A modern automotive website focused on car presentation, visually rich sections, responsive layouts, and a professional automotive user experience.',
-    image:
-      'https://i.ibb.co.com/9HPPXDY3/motorix-car-web-Overview-Vercel-09-24-2026-09-29-AM.png',
-    liveUrl: 'https://motorix-car-web.vercel.app/',
-    githubUrl: '',
-    technologies: [
-      'React',
-      'JavaScript',
-      'Tailwind CSS',
-      'Automotive UI',
-      'Responsive Design'
-    ],
-    featured: true,
-    year: '2026'
-  },
-  {
-    id: 17,
     title: 'GreenBasket',
     slug: 'greenbasket',
     category: 'Full-Stack WebApp/Website Projects',
@@ -424,9 +65,7 @@ const productData = [
     image:
       'https://i.ibb.co.com/N2RYcZjG/green-basket-website-Overview-Vercel-09-24-2026-09-30-AM.png',
     liveUrl: 'https://green-basket-website.vercel.app/',
-    githubUrl: '',
-    clientUrl: 'https://green-basket-website.vercel.app/',
-    serverUrl: '',
+    githubUrl: 'https://github.com/kyachingprue/my-ecommerce-client',
     technologies: [
       'React',
       'JavaScript',
@@ -438,9 +77,38 @@ const productData = [
     featured: true,
     year: 2025
   },
-
   {
-    id: 18,
+  id: 4,
+  title: 'Avenza Shopping',
+  slug: 'avenza-shopping',
+  category: 'Full-Stack WebApp/Website Projects',
+  type: 'Full-Stack E-Commerce Web Application',
+  description:
+    'A modern full-stack e-commerce web application designed to provide a seamless online shopping experience. It features product browsing, category-based navigation, shopping cart management, secure user authentication, order processing, and an interactive admin dashboard. The platform also integrates payment processing, product management, email verification, and responsive user interfaces to deliver a complete online shopping solution.',
+  image: 'https://res.cloudinary.com/dczi5wwkj/image/upload/f_auto/q_auto/avenza-shopping-Overview-_-Vercel-11-07-2026_10_52_PM_hzzjwz.png',
+  liveUrl: 'https://avenza-shopping.vercel.app/',
+  githubUrl: 'https://github.com/kyachingprue/avenza-shop-frontend',
+  technologies: [
+    'React',
+    'TypeScript',
+    'JavaScript',
+    'Tailwind CSS',
+    'Node.js',
+    'Express.js',
+    'MongoDB',
+    'Firebase Admin SDK',
+    'JWT Authentication',
+    'Stripe',
+    'Nodemailer',
+    'REST API',
+    'ImgBB API',
+    'Vercel'
+  ],
+  featured: true,
+  year: 2026
+},
+  {
+    id: 5,
     title: 'Freelance Job Website',
     slug: 'freelance-job-website',
     category: 'Full-Stack WebApp/Website Projects',
@@ -450,9 +118,7 @@ const productData = [
     image:
       'https://i.ibb.co.com/4nfNq333/freelance-job-website-client-Overview-Vercel-09-24-2026-09-31-AM.png',
     liveUrl: 'https://freelance-job-website-client.vercel.app/',
-    githubUrl: '',
-    clientUrl: 'https://freelance-job-website-client.vercel.app/',
-    serverUrl: '',
+    githubUrl: 'https://github.com/kyachingprue/freelance-job-website-client',
     technologies: [
       'React',
       'JavaScript',
@@ -465,8 +131,8 @@ const productData = [
     year: 2025
   },
 
-  {
-    id: 19,
+   {
+    id: 6,
     title: 'GoExplore Travel Studio',
     slug: 'goexplore-travel-studio',
     category: 'Full-Stack WebApp/Website Projects',
@@ -476,9 +142,7 @@ const productData = [
     image:
       'https://i.ibb.co.com/0j4LTqxn/go-explore-travel-studio-client-Overview-Vercel-09-24-2026-09-33-AM.png',
     liveUrl: 'https://go-explore-travel-studio-client.vercel.app/',
-    githubUrl: '',
-    clientUrl: 'https://go-explore-travel-studio-client.vercel.app/',
-    serverUrl: '',
+    githubUrl: 'https://github.com/kyachingprue/GoExplore-travel-studio-client',
     technologies: [
       'React',
       'JavaScript',
@@ -491,110 +155,36 @@ const productData = [
     year: 2025
   },
 
-  {
-    id: 20,
-    title: 'ShopNest',
-    slug: 'shopnest',
-    category: 'Frontend Website Projects',
-    type: 'E-Commerce Web Application',
-    description:
-      'A modern e-commerce platform built with a responsive shopping experience, product browsing, category pages, deals, and detailed product views.',
-    image:
-      'https://i.ibb.co.com/qMDKVzqm/shop-nest-app-Overview-Vercel-09-24-2026-09-34-AM.png',
-    liveUrl: 'https://shop-nest-app.vercel.app/',
-    githubUrl: '',
-    clientUrl: 'https://shop-nest-app.vercel.app/',
-    serverUrl: '',
-    technologies: [
-      'Next.js',
-      'TypeScript',
-      'React',
-      'Tailwind CSS',
-      'Redux Toolkit'
-    ],
-    featured: true,
-    year: 2026
+   {
+  id: 7,
+  title: 'MiniBook',
+  slug: 'mini-book',
+  category: 'Full-Stack WebApp/Website Projects',
+  type: 'Appointment Booking Web Application',
+  description:
+    'A modern full-stack appointment booking platform designed to simplify appointment scheduling and management. It provides an intuitive user experience with appointment management, user authentication, interactive dashboards, dynamic analytics, and responsive interfaces for efficient booking and administration.',
+  image: 'https://res.cloudinary.com/dczi5wwkj/image/upload/f_auto/q_auto/Mashuenu-Marma-_-MiniBook-11-07-2026_10_39_PM_kx7lek.png',
+  liveUrl: 'https://mini-book-tau.vercel.app/',
+  githubUrl: 'https://github.com/kyachingprue/miniBook-frontend',
+  technologies: [
+    'React',
+    'JavaScript',
+    'Tailwind CSS',
+    'Node.js',
+    'Express.js',
+    'PostgreSQL',
+    'Neon Database',
+    'Firebase',
+    'JWT Authentication',
+    'Recharts',
+    'React Hot Toast'
+  ],
+  featured: true,
+  year: 2026
   },
 
-  {
-    id: 21,
-    title: 'My Portfolio Website',
-    slug: 'my-portfolio-website',
-    category: 'Landing Projects',
-    type: 'Developer Portfolio',
-    description:
-      'A personal developer portfolio website created to showcase professional skills, projects, technologies, and development experience through a modern responsive design.',
-    image:
-      'https://i.ibb.co.com/LzV8tkRz/my-portfolio-web-Overview-Vercel-09-24-2026-09-34-AM.png',
-    liveUrl: 'https://my-portfolio-web-three-chi.vercel.app/',
-    githubUrl: '',
-    clientUrl: 'https://my-portfolio-web-three-chi.vercel.app/',
-    serverUrl: '',
-    technologies: [
-      'React',
-      'JavaScript',
-      'Tailwind CSS',
-      'Framer Motion',
-      'Responsive Design'
-    ],
-    featured: false,
-    year: 2025
-  },
-
-  {
-    id: 22,
-    title: 'AetherAI',
-    slug: 'aetherai',
-    category: 'Full-Stack WebApp/Website Projects',
-    type: 'AI SaaS Dashboard',
-    description:
-      'An AI-focused SaaS dashboard interface designed with a modern application layout, analytics-style sections, and a responsive user experience.',
-    image:
-      'https://i.ibb.co.com/jkb1dSfG/Aether-AI-Home-page-09-24-2026-09-37-AM.png',
-    liveUrl: 'https://aetheraiwebsite.vercel.app/',
-    githubUrl: '',
-    clientUrl: 'https://aetheraiwebsite.vercel.app/',
-    serverUrl: '',
-    technologies: [
-      'React',
-      'JavaScript',
-      'Tailwind CSS',
-      'Node.js',
-      'Express.js',
-      'MongoDB'
-    ],
-    featured: true,
-    year: 2025
-  },
-
-  {
-    id: 23,
-    title: 'Animation Landing Project',
-    slug: 'animation-landing-project',
-    category: 'Landing Projects',
-    type: 'Job Marketplace',
-    description:
-      'A freelance job platform concept featuring a professional interface for browsing freelance opportunities and connecting users with job-related services.',
-    image:
-      'https://i.ibb.co.com/W4yhgyqW/freelancing-job-website-09-24-2026-09-41-AM.png',
-    liveUrl: 'https://freelancing-job-website.vercel.app/',
-    githubUrl: '',
-    clientUrl: 'https://freelancing-job-website.vercel.app/',
-    serverUrl: '',
-    technologies: [
-      'React',
-      'JavaScript',
-      'Tailwind CSS',
-      'Node.js',
-      'Express.js',
-      'MongoDB'
-    ],
-    featured: false,
-    year: 2025
-  },
-
-  {
-    id: 24,
+ {
+    id: 8,
     title: 'AI Document Analysis',
     slug: 'ai-document-analysis',
     category: 'Full-Stack WebApp/Website Projects',
@@ -604,9 +194,7 @@ const productData = [
     image:
       'https://i.ibb.co.com/wZPpyFS9/ai-document-analysis-Overview-Vercel-09-24-2026-09-42-AM.png',
     liveUrl: 'https://ai-document-analysis.vercel.app/',
-    githubUrl: '',
-    clientUrl: 'https://ai-document-analysis.vercel.app/',
-    serverUrl: '',
+    githubUrl: 'https://github.com/kyachingprue/multi-document-analysis',
     technologies: [
       'React',
       'TypeScript',
@@ -620,106 +208,117 @@ const productData = [
   },
 
   {
-    id: 25,
-    title: 'Jobs Project App',
-    slug: 'jobs-project-app',
-    category: 'Landing Projects',
-    type: 'Job Application Platform',
+    id: 9,
+    title: 'Antixor Staffing',
+    slug: 'antixor-staffing',
+    category: 'Frontend Website Projects',
+    type: 'Landing Page',
     description:
-      'A job-focused web application designed for exploring job opportunities and presenting a structured and responsive recruitment-oriented interface.',
-    image:
-      'https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1200&q=80',
-    liveUrl: 'https://jobs-project-app.vercel.app/',
-    githubUrl: '',
-    clientUrl: 'https://jobs-project-app.vercel.app/',
-    serverUrl: '',
+      'A modern staffing and recruitment landing website designed with a professional business-focused interface, responsive layouts, and polished visual sections.',
+    image: 'https://i.ibb.co.com/N22zq4mY/antixor-website-banner.png',
+    liveUrl: 'https://antixor-website.vercel.app/',
+    githubUrl: 'https://github.com/kyachingprue/antixor-staffing-website',
     technologies: [
       'React',
       'JavaScript',
       'Tailwind CSS',
-      'Node.js',
-      'Express.js',
-      'MongoDB'
-    ],
-    featured: false,
-    year: 2025
-  },
-
-  {
-    id: 26,
-    title: 'Practice Project',
-    slug: 'practice-project',
-    category: 'Full-Stack WebApp/Website Projects',
-    type: 'Web Application',
-    description:
-      'A practical web development project created to experiment with modern frontend development, application structure, responsive UI, and interactive features.',
-    image:
-      'https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1200&q=80',
-    liveUrl: 'https://practice-project-client-fzgg.vercel.app/',
-    githubUrl: '',
-    clientUrl: 'https://practice-project-client-fzgg.vercel.app/',
-    serverUrl: '',
-    technologies: [
-      'React',
-      'JavaScript',
-      'Tailwind CSS',
-      'Node.js',
-      'Express.js',
-      'MongoDB'
-    ],
-    featured: false,
-    year: 2025
-  },
-
-  {
-    id: 27,
-    title: 'ChatFlow Chat Studio',
-    slug: 'chatflow-chat-studio',
-    category: 'Full-Stack WebApp/Website Projects',
-    type: 'Real-Time Chat Application',
-    description:
-      'A modern chat application interface designed for real-time communication with a clean conversation layout and responsive user experience.',
-    image:
-      'https://i.ibb.co.com/YF282qR5/chatflow-chat-studio-Overview-Vercel-09-24-2026-09-44-AM.png',
-    liveUrl: 'https://chatflow-chat-studio.vercel.app/',
-    githubUrl: '',
-    clientUrl: 'https://chatflow-chat-studio.vercel.app/',
-    serverUrl: '',
-    technologies: [
-      'React',
-      'JavaScript',
-      'Tailwind CSS',
-      'Node.js',
-      'Express.js',
-      'MongoDB',
-      'Socket.IO'
+      'Responsive Design',
+      'Modern UI'
     ],
     featured: true,
-    year: 2025
+    year: '2026'
   },
 
   {
-    id: 28,
-    title: 'React Dragon News',
-    slug: 'react-dragon-news',
-    category: 'Landing Projects',
-    type: 'News Web Application',
+    id: 10,
+    title: 'Nexora AI Platform',
+    slug: 'nexora-ai-platform',
+    category: 'Frontend Website Projects',
+    type: 'AI Platform',
     description:
-      'A responsive news application built around category-based news browsing and a modern editorial-style user interface.',
+      'A modern AI platform interface featuring a futuristic visual style, responsive sections, modern navigation, and product-focused presentation.',
     image:
-      'https://images.unsplash.com/photo-1504711434969-e33886168f5c?auto=format&fit=crop&w=1200&q=80',
-    liveUrl: 'https://react-dragon-news-project.vercel.app/',
-    githubUrl: '',
-    clientUrl: 'https://react-dragon-news-project.vercel.app/',
-    serverUrl: '',
+      'https://i.ibb.co.com/QZc256d/nexora-ai-platform-Overview-Vercel-09-24-2026-09-11-AM.png',
+    liveUrl: 'https://nexora-ai-platform-sigma.vercel.app/',
+    githubUrl: 'https://github.com/kyachingprue/nexora-ai-website',
     technologies: [
       'React',
       'JavaScript',
       'Tailwind CSS',
-      'REST API',
+      'AI UI',
       'Responsive Design'
     ],
-    featured: false,
+    featured: true,
+    year: '2026'
+  },
+
+  {
+    id: 11,
+    title: 'Flights & Travel',
+    slug: 'flights-travel',
+    category: 'Frontend Website Projects',
+    type: 'Travel Website',
+    description:
+      'A responsive travel and flight booking style website designed with a modern travel-focused interface and user-friendly content sections.',
+    image:
+      'https://i.ibb.co.com/RkfTX4J4/flights-travel-web-Overview-Vercel-09-24-2026-09-12-AM.png',
+    liveUrl: 'https://flights-travel-web.vercel.app/',
+    githubUrl: 'https://github.com/kyachingprue/flights-travel-project',
+    technologies: [
+      'React',
+      'JavaScript',
+      'Tailwind CSS',
+      'Travel UI',
+      'Responsive Design'
+    ],
+    featured: true,
+    year: '2026'
+  },
+
+  {
+    id: 12,
+    title: 'Real Estate Home Service',
+    slug: 'real-estate-home-service',
+    category: 'Frontend Website Projects',
+    type: 'Real Estate Website',
+    description:
+      'A modern real estate and home service website featuring property-focused presentation, service sections, responsive design, and professional UI.',
+    image:
+      'https://i.ibb.co.com/5WspPzcn/realestate-home-service-Overview-Vercel-09-24-2026-09-14-AM.png',
+    liveUrl: 'https://realestate-home-service.vercel.app/',
+    githubUrl: 'https://github.com/kyachingprue/realestate-home-project',
+    technologies: [
+      'React',
+      'JavaScript',
+      'Tailwind CSS',
+      'Real Estate UI',
+      'Responsive Design'
+    ],
+    featured: true,
+    year: '2026'
+  },
+
+  {
+    id:13,
+    title: 'AetherAI',
+    slug: 'aetherai',
+    category: 'Full-Stack WebApp/Website Projects',
+    type: 'AI SaaS Dashboard',
+    description:
+      'An AI-focused SaaS dashboard interface designed with a modern application layout, analytics-style sections, and a responsive user experience.',
+    image:
+      'https://i.ibb.co.com/jkb1dSfG/Aether-AI-Home-page-09-24-2026-09-37-AM.png',
+    liveUrl: 'https://aetheraiwebsite.vercel.app/',
+    githubUrl: 'https://github.com/kyachingprue/aether-ai-website',
+    technologies: [
+      'React',
+      'JavaScript',
+      'Tailwind CSS',
+      'Node.js',
+      'Express.js',
+      'MongoDB'
+    ],
+    featured: true,
     year: 2025
   }
 ]

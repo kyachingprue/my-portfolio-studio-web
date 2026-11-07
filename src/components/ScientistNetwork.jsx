@@ -1,257 +1,303 @@
-import React, { useEffect, useState } from 'react'
-import { motion } from 'motion/react'
-import * as Tooltip from '@radix-ui/react-tooltip'
+import { useEffect, useState } from 'react'
+import { motion as Motion, useReducedMotion } from 'motion/react'
+import { MapPin, Network, Sparkles } from 'lucide-react'
 import { scientists } from '../data/scientists'
 import { positions } from '../data/networkPositions'
 
-const ScientistNetwork = () => {
-  const [step, setStep] = useState(0)
+const networkMembers = scientists.slice(0, positions.length)
 
-  // Auto Move
+const connections = networkMembers.flatMap((_, index) => {
+  const { x, y } = positions[index]
+  const x1 = Number.parseFloat(x)
+  const y1 = Number.parseFloat(y)
+
+  return networkMembers
+    .map((_, otherIndex) => {
+      if (otherIndex === index) return null
+
+      const otherX = Number.parseFloat(positions[otherIndex].x)
+      const otherY = Number.parseFloat(positions[otherIndex].y)
+
+      return {
+        start: Math.min(index, otherIndex),
+        end: Math.max(index, otherIndex),
+        distance: (x1 - otherX) ** 2 + (y1 - otherY) ** 2,
+      }
+    })
+    .filter(Boolean)
+    .sort((a, b) => a.distance - b.distance)
+    .slice(0, 2)
+    .map(({ start, end }) => `${start}-${end}`)
+})
+
+const uniqueConnections = [...new Set(connections)].map((connection) => {
+  const [start, end] = connection.split('-').map(Number)
+  return { start, end, id: connection }
+})
+
+function ScientistNetwork() {
+  const [activeIndex, setActiveIndex] = useState(0)
+  const [selectedIndex, setSelectedIndex] = useState(null)
+  const [hoveredIndex, setHoveredIndex] = useState(null)
+  const reduceMotion = useReducedMotion()
+  const focusedIndex = hoveredIndex ?? selectedIndex ?? activeIndex
+  const selectedScientist =
+    selectedIndex === null ? null : networkMembers[selectedIndex]
+
   useEffect(() => {
-    const interval = setInterval(() => {
-      setStep(prev => (prev + 1) % positions.length)
-    }, 4500)
+    if (reduceMotion) return undefined
 
-    return () => clearInterval(interval)
-  }, [])
+    const interval = window.setInterval(() => {
+      setActiveIndex((current) => (current + 1) % networkMembers.length)
+    }, 2200)
+
+    return () => window.clearInterval(interval)
+  }, [reduceMotion])
+
+  const activeConnections = uniqueConnections.filter(
+    ({ start, end }) => start === focusedIndex || end === focusedIndex,
+  )
 
   return (
-    <section className="relative w-full min-h-screen overflow-hidden">
-      {/*-----> BACKGROUND <-----*/}
-      <div className="absolute inset-0 bg-linear-to-br from-indigo-950 via-[#09090f] to-black" />
-
-      {/* Animated Gradient Glow */}
-      <motion.div
-        animate={{
-          scale: [1, 1.2, 1],
-          opacity: [0.4, 0.8, 0.4]
-        }}
-        transition={{
-          duration: 8,
-          repeat: Infinity
-        }}
-        className="absolute top-0 left-1/2 -translate-x-1/2 w-175 h-175 bg-cyan-500/10 blur-3xl rounded-full"
-      />
-
-      <motion.div
-        animate={{
-          scale: [1.2, 1, 1.2],
-          opacity: [0.3, 0.7, 0.3]
-        }}
-        transition={{
-          duration: 10,
-          repeat: Infinity
-        }}
-        className="absolute bottom-0 right-0 w-125 h-125 bg-purple-500/10 blur-3xl rounded-full"
-      />
-
-      {/* Grid Background */}
-      <div className="absolute inset-0 opacity-[0.06]">
-        <div className="h-full w-full bg-[linear-gradient(to_right,#ffffff12_1px,transparent_1px),linear-gradient(to_bottom,#ffffff12_1px,transparent_1px)] bg-size-[60px_60px]" />
+    <section className="relative isolate overflow-hidden bg-[#050816] px-4 py-20 text-white sm:px-6 sm:py-24 lg:px-8">
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 -z-10 overflow-hidden"
+      >
+        <div className="absolute -left-48 top-20 h-96 w-96 rounded-full bg-cyan-500/10 blur-[130px]" />
+        <div className="absolute -right-48 bottom-0 h-128 w-lg rounded-full bg-violet-500/10 blur-[140px]" />
+        <div className="absolute inset-0 opacity-[0.07] bg-[linear-gradient(rgba(148,163,184,0.35)_1px,transparent_1px),linear-gradient(90deg,rgba(148,163,184,0.35)_1px,transparent_1px)] bg-size-[48px_48px]" />
       </div>
 
-      {/* ================= TITLE ================= */}
-      <div className="relative z-20 flex flex-col items-center justify-center text-center pt-20 px-4">
-        <motion.h1
-          initial={{ opacity: 0, y: 60 }}
+      <div className="mx-auto max-w-7xl">
+        <Motion.header
+          initial={reduceMotion ? false : { opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
-          className="text-2xl sm:text-4xl lg:text-6xl font-black leading-tight"
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.6 }}
+          className="mx-auto max-w-3xl text-center"
         >
-          <span className="bg-linear-to-r from-cyan-400 via-blue-500 to-purple-500 bg-clip-text text-transparent">
-            Scientist Network
+          <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-cyan-300/15 bg-cyan-300/6 px-4 py-2 text-sm font-medium text-cyan-200">
+            <Sparkles size={15} aria-hidden="true" />
+            A living map of ideas
+          </div>
+
+          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl">
+            Great minds,{' '}
+            <span className="bg-linear-to-r from-cyan-300 via-blue-400 to-violet-400 bg-clip-text text-transparent">
+              connected
+            </span>
+          </h2>
+          <p className="mx-auto mt-4 max-w-2xl text-sm leading-7 text-slate-400 sm:text-base">
+            Explore the people whose ideas continue to shape computer science.
+            Select a node to follow its connections through the network.
+          </p>
+        </Motion.header>
+
+        <div className="mt-10 flex flex-wrap items-center justify-center gap-3 text-xs font-medium text-slate-300 sm:mt-12">
+          <span className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/4 px-3.5 py-2">
+            <Network size={14} className="text-cyan-300" aria-hidden="true" />
+            {networkMembers.length} pioneers
           </span>
-        </motion.h1>
+          <span className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/4 px-3.5 py-2">
+            <span className="h-2 w-2 rounded-full bg-emerald-400 shadow-[0_0_12px_rgba(52,211,153,0.8)]" />
+            Live connections
+          </span>
+        </div>
 
-        <motion.p
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.2 }}
-          className="mt-6 max-w-2xl text-gray-300 text-sm sm:text-base lg:text-lg leading-8"
-        >
-          Explore an animated futuristic network of brilliant scientists,
-          connected through electric energy and interactive motion.
-        </motion.p>
-      </div>
+        <div className="relative mx-auto mt-8 h-117.5 max-w-6xl sm:h-142.5 lg:h-162.5">
+          <div
+            aria-hidden="true"
+            className="pointer-events-none absolute left-1/2 top-1/2 h-48 w-48 -translate-x-1/2 -translate-y-1/2 rounded-full border border-cyan-300/8 sm:h-72 sm:w-72"
+          />
+          <div
+            aria-hidden="true"
+            className="pointer-events-none absolute left-1/2 top-1/2 h-32 w-32 -translate-x-1/2 -translate-y-1/2 rounded-full border border-violet-300/10 sm:h-52 sm:w-52"
+          />
+          <Motion.div
+            aria-hidden="true"
+            animate={reduceMotion ? undefined : { rotate: 360 }}
+            transition={{ duration: 48, repeat: Infinity, ease: 'linear' }}
+            className="pointer-events-none absolute left-1/2 top-1/2 h-[min(84vw,34rem)] w-[min(84vw,34rem)] -translate-x-1/2 -translate-y-1/2 rounded-full border border-dashed border-cyan-200/8"
+          />
 
-      {/* ================= ELECTRIC NETWORK ================= */}
-      <div className="relative w-full h-200 sm:h-225 lg:h-screen">
-        {/* SVG ELECTRIC LINES */}
-        <svg className="absolute inset-0 w-full h-full z-0">
-          {positions.map((pos, i) => {
-            const next = positions[(i + 1) % positions.length]
+          <svg
+            aria-hidden="true"
+            viewBox="0 0 100 100"
+            preserveAspectRatio="none"
+            className="pointer-events-none absolute inset-0 h-full w-full overflow-visible"
+          >
+            <defs>
+              <linearGradient id="network-line-gradient">
+                <stop offset="0%" stopColor="#22d3ee" />
+                <stop offset="100%" stopColor="#818cf8" />
+              </linearGradient>
+            </defs>
+            {uniqueConnections.map(({ start, end, id }) => {
+              const from = positions[start]
+              const to = positions[end]
+              const isActive = activeConnections.some(
+                (connection) => connection.id === id,
+              )
+
+              return (
+                <g key={id}>
+                  <line
+                    x1={from.x}
+                    y1={from.y}
+                    x2={to.x}
+                    y2={to.y}
+                    stroke={isActive ? 'url(#network-line-gradient)' : '#64748b'}
+                    strokeWidth={isActive ? 1.5 : 0.8}
+                    strokeOpacity={isActive ? 0.85 : 0.2}
+                    vectorEffect="non-scaling-stroke"
+                    className="transition-all duration-500"
+                  />
+                  {isActive && !reduceMotion && (
+                    <Motion.circle
+                      r="0.48"
+                      fill="#a5f3fc"
+                      initial={{
+                        cx: Number.parseFloat(from.x),
+                        cy: Number.parseFloat(from.y),
+                      }}
+                      animate={{
+                        cx: [
+                          Number.parseFloat(from.x),
+                          Number.parseFloat(to.x),
+                        ],
+                        cy: [
+                          Number.parseFloat(from.y),
+                          Number.parseFloat(to.y),
+                        ],
+                      }}
+                      transition={{
+                        duration: 1.8,
+                        repeat: Infinity,
+                        repeatType: 'reverse',
+                        ease: 'linear',
+                      }}
+                    />
+                  )}
+                </g>
+              )
+            })}
+          </svg>
+
+          {networkMembers.map((scientist, index) => {
+            const position = positions[index]
+            const isFocused = focusedIndex === index
+            const isSelected = selectedIndex === index
 
             return (
-              <g key={i}>
-                {/* Glow Line */}
-                <motion.line
-                  x1={pos.x}
-                  y1={pos.y}
-                  x2={next.x}
-                  y2={next.y}
-                  stroke="rgba(34,211,238,0.18)"
-                  strokeWidth="10"
-                  strokeLinecap="round"
-                  animate={{
-                    opacity: [0.2, 0.6, 0.2]
-                  }}
-                  transition={{
-                    duration: 3,
-                    repeat: Infinity,
-                    delay: i * 0.1
-                  }}
+              <Motion.button
+                key={scientist.id}
+                type="button"
+                aria-label={`${scientist.name}, ${scientist.field}. Select to highlight connections.`}
+                aria-pressed={isSelected}
+                onClick={() =>
+                  setSelectedIndex((current) =>
+                    current === index ? null : index,
+                  )
+                }
+                onMouseEnter={() => setHoveredIndex(index)}
+                onMouseLeave={() => setHoveredIndex(null)}
+                onFocus={() => setHoveredIndex(index)}
+                onBlur={() => setHoveredIndex(null)}
+                initial={reduceMotion ? false : { opacity: 0, scale: 0.7 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{
+                  duration: reduceMotion ? 0 : 0.45,
+                  delay: reduceMotion ? 0 : index * 0.035,
+                }}
+                whileHover={reduceMotion ? undefined : { scale: 1.16 }}
+                style={{
+                  left: position.x,
+                  top: position.y,
+                  translate: '-50% -50%',
+                }}
+                className={`group absolute z-10 flex size-10 items-center justify-center rounded-full border bg-slate-950 p-1 shadow-lg outline-none transition-[border-color,box-shadow] duration-300 focus-visible:ring-2 focus-visible:ring-cyan-200 focus-visible:ring-offset-2 focus-visible:ring-offset-[#050816] sm:size-12 md:size-14 ${
+                  isFocused
+                    ? 'border-cyan-200 shadow-[0_0_28px_rgba(34,211,238,0.55)]'
+                    : 'border-white/25 shadow-black/30 hover:border-cyan-200/80'
+                }`}
+              >
+                <span
+                  aria-hidden="true"
+                  className={`absolute -inset-1 rounded-full border border-cyan-300/70 transition-opacity duration-300 ${
+                    isFocused ? 'opacity-100' : 'opacity-0'
+                  }`}
                 />
-
-                {/* Main Electric Line */}
-                <motion.line
-                  x1={pos.x}
-                  y1={pos.y}
-                  x2={next.x}
-                  y2={next.y}
-                  stroke="url(#electricGradient)"
-                  strokeWidth="2.5"
-                  strokeLinecap="round"
-                  strokeDasharray="12 10"
-                  animate={{
-                    strokeDashoffset: [0, -40]
-                  }}
-                  transition={{
-                    duration: 2,
-                    repeat: Infinity,
-                    ease: 'linear'
-                  }}
+                <img
+                  src={scientist.image}
+                  alt=""
+                  loading="lazy"
+                  draggable="false"
+                  className="relative h-full w-full rounded-full object-cover"
                 />
-              </g>
+                <span
+                  aria-hidden="true"
+                  className={`absolute -bottom-0.5 -right-0.5 size-2.5 rounded-full border-2 border-[#050816] transition-colors duration-300 ${
+                    isFocused ? 'bg-emerald-300' : 'bg-slate-500'
+                  }`}
+                />
+                <span className="pointer-events-none absolute bottom-full left-1/2 mb-3 w-max max-w-44 -translate-x-1/2 rounded-xl border border-white/10 bg-slate-950/95 px-3 py-2 text-left opacity-0 shadow-xl backdrop-blur transition-opacity group-hover:opacity-100 group-focus-visible:opacity-100">
+                  <span className="block text-xs font-semibold text-white">
+                    {scientist.name}
+                  </span>
+                  <span className="mt-0.5 block text-[11px] text-cyan-200">
+                    {scientist.field}
+                  </span>
+                </span>
+              </Motion.button>
             )
           })}
+        </div>
 
-          {/* Gradient */}
-          <defs>
-            <linearGradient
-              id="electricGradient"
-              x1="0%"
-              y1="0%"
-              x2="100%"
-              y2="100%"
+        <Motion.div
+          layout
+          aria-live="polite"
+          className="mx-auto -mt-2 flex min-h-24 max-w-xl items-center justify-center"
+        >
+          {selectedScientist ? (
+            <Motion.div
+              key={selectedScientist.id}
+              initial={reduceMotion ? false : { opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              className="flex w-full items-center gap-4 rounded-2xl border border-cyan-200/15 bg-slate-900/70 p-4 shadow-xl shadow-cyan-950/20 backdrop-blur-xl sm:p-5"
             >
-              <stop offset="0%" stopColor="#22d3ee" />
-              <stop offset="50%" stopColor="#3b82f6" />
-              <stop offset="100%" stopColor="#8b5cf6" />
-            </linearGradient>
-          </defs>
-        </svg>
-
-        {/* -----> SCIENTIST NODES <----- */}
-        {scientists.slice(0, 17).map((scientist, index) => {
-          const posIndex = (step + index) % positions.length
-
-          return (
-            <Tooltip.Provider key={scientist.id}>
-              <Tooltip.Root>
-                <Tooltip.Trigger asChild>
-                  <motion.div
-                    className="absolute z-10"
-                    animate={{
-                      left: positions[posIndex].x,
-                      top: positions[posIndex].y
-                    }}
-                    transition={{
-                      duration: 1.8,
-                      ease: 'easeInOut'
-                    }}
-                  >
-                    {/* OUTER GLOW */}
-                    <motion.div
-                      animate={{
-                        scale: [1, 1.3, 1],
-                        opacity: [0.4, 0.8, 0.4]
-                      }}
-                      transition={{
-                        duration: 3,
-                        repeat: Infinity,
-                        delay: index * 0.15
-                      }}
-                      className="absolute inset-0 rounded-full bg-cyan-400/30 blur-xl"
-                    />
-
-                    {/* IMAGE */}
-                    <motion.img
-                      src={scientist.image}
-                      alt={scientist.name}
-                      className="
-                        relative
-                        w-14 h-14
-                        sm:w-16 sm:h-16
-                        md:w-20 md:h-20
-                        lg:w-24 lg:h-24
-                        rounded-full
-                        object-cover
-                        border-2 border-cyan-400/80
-                        bg-black/40
-                        backdrop-blur-xl
-                        cursor-pointer
-                        shadow-[0_0_35px_rgba(34,211,238,0.45)]
-                      "
-                      whileHover={{
-                        scale: 1.18,
-                        rotate: 3
-                      }}
-                      transition={{
-                        type: 'spring',
-                        stiffness: 220,
-                        damping: 12
-                      }}
-                    />
-
-                    {/* Small Pulse Dot */}
-                    <motion.div
-                      animate={{
-                        scale: [1, 1.8, 1],
-                        opacity: [0.8, 0, 0.8]
-                      }}
-                      transition={{
-                        duration: 2,
-                        repeat: Infinity
-                      }}
-                      className="absolute -bottom-1 -right-1 w-4 h-4 rounded-full bg-cyan-400"
-                    />
-                  </motion.div>
-                </Tooltip.Trigger>
-
-                {/* TOOLTIP */}
-                <Tooltip.Portal>
-                  <Tooltip.Content
-                    side="top"
-                    sideOffset={12}
-                    className="
-                      z-50
-                      rounded-2xl
-                      border border-cyan-400/20
-                      bg-black/70
-                      backdrop-blur-2xl
-                      px-5 py-4
-                      shadow-2xl
-                      shadow-cyan-500/20
-                    "
-                  >
-                    <p className="text-white font-bold text-sm sm:text-base">
-                      {scientist.name}
-                    </p>
-
-                    <p className="text-cyan-300 text-sm mt-1">
-                      {scientist.field}
-                    </p>
-
-                    <p className="text-gray-400 text-xs mt-1">
-                      {scientist.location}
-                    </p>
-                  </Tooltip.Content>
-                </Tooltip.Portal>
-              </Tooltip.Root>
-            </Tooltip.Provider>
-          )
-        })}
+              <img
+                src={selectedScientist.image}
+                alt=""
+                className="size-12 shrink-0 rounded-full border border-cyan-200/30 object-cover"
+              />
+              <div className="min-w-0 flex-1">
+                <p className="font-semibold text-white">
+                  {selectedScientist.name}
+                </p>
+                <p className="mt-1 text-sm text-cyan-100/80">
+                  {selectedScientist.field}
+                </p>
+                <p className="mt-1 inline-flex items-center gap-1 text-xs text-slate-400">
+                  <MapPin size={12} aria-hidden="true" />
+                  {selectedScientist.location}
+                </p>
+              </div>
+              <button
+                type="button"
+                onClick={() => setSelectedIndex(null)}
+                className="rounded-lg border border-white/10 px-3 py-2 text-xs font-medium text-slate-300 transition hover:border-cyan-200/30 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-200"
+              >
+                Clear
+              </button>
+            </Motion.div>
+          ) : (
+            <p className="text-center text-xs text-slate-500">
+              Hover, focus, or select a portrait to explore its connections
+            </p>
+          )}
+        </Motion.div>
       </div>
     </section>
   )

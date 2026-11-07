@@ -1,5 +1,5 @@
-import { useMemo, useState } from 'react'
-import { motion, AnimatePresence } from 'motion/react'
+import { useState } from 'react'
+import { motion as Motion, AnimatePresence } from 'motion/react'
 import {
   ArrowUpRight,
   ChevronDown,
@@ -13,45 +13,21 @@ import {
 
 import productData from '../product/productData'
 
-const categories = [
-  'All Projects',
-  'Landing Projects',
-  'Frontend Website Projects',
-  'Full-Stack WebApp/Website Projects',
-]
-
 const INITIAL_PROJECTS = 6
 
 export default function Projects() {
-  const [activeCategory, setActiveCategory] = useState('All Projects')
   const [showAll, setShowAll] = useState(false)
   const [expandedDescriptions, setExpandedDescriptions] = useState({})
 
-  const filteredProjects = useMemo(() => {
-    if (activeCategory === 'All Projects') {
-      return productData
-    }
-
-    return productData.filter(
-      (project) => project.category === activeCategory,
-    )
-  }, [activeCategory])
-
   const visibleProjects = showAll
-    ? filteredProjects
-    : filteredProjects.slice(0, INITIAL_PROJECTS)
+    ? productData
+    : productData.slice(0, INITIAL_PROJECTS)
 
   const toggleDescription = (id) => {
     setExpandedDescriptions((previous) => ({
       ...previous,
       [id]: !previous[id],
     }))
-  }
-
-  const handleCategoryChange = (category) => {
-    setActiveCategory(category)
-    setShowAll(false)
-    setExpandedDescriptions({})
   }
 
   return (
@@ -67,19 +43,19 @@ export default function Projects() {
         className="pointer-events-none absolute inset-0 -z-10 overflow-hidden"
       >
         {/* Top center glow */}
-        <div className="absolute left-1/2 top-[-180px] h-[500px] w-[700px] -translate-x-1/2 rounded-full bg-emerald-500/10 blur-[130px]" />
+        <div className="absolute left-1/2 -top-45 h-125 w-175 -translate-x-1/2 rounded-full bg-emerald-500/10 blur-[130px]" />
 
         {/* Left glow */}
-        <div className="absolute -left-60 top-[25%] h-[500px] w-[500px] rounded-full bg-cyan-500/8 blur-[130px]" />
+        <div className="absolute -left-60 top-[25%] h-125 w-125 rounded-full bg-cyan-500/8 blur-[130px]" />
 
         {/* Right glow */}
-        <div className="absolute -right-60 top-[45%] h-[550px] w-[550px] rounded-full bg-violet-600/10 blur-[140px]" />
+        <div className="absolute -right-60 top-[45%] h-137.5 w-137.5 rounded-full bg-violet-600/10 blur-[140px]" />
 
         {/* Bottom glow */}
-        <div className="absolute bottom-[-200px] left-[35%] h-[450px] w-[600px] rounded-full bg-emerald-500/5 blur-[130px]" />
+        <div className="absolute -bottom-50 left-[35%] h-112.5 w-150 rounded-full bg-emerald-500/5 blur-[130px]" />
 
         {/* Subtle grid */}
-        <div className="absolute inset-0 bg-[linear-gradient(rgba(148,163,184,0.035)_1px,transparent_1px),linear-gradient(90deg,rgba(148,163,184,0.035)_1px,transparent_1px)] bg-[size:50px_50px]" />
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(148,163,184,0.035)_1px,transparent_1px),linear-gradient(90deg,rgba(148,163,184,0.035)_1px,transparent_1px)] bg-size-[50px_50px]" />
 
         {/* Top dark fade */}
         <div className="absolute inset-x-0 top-0 h-40 bg-linear-to-b from-black/30 to-transparent" />
@@ -93,7 +69,7 @@ export default function Projects() {
         {/* =====================================================
             SECTION HEADER
         ====================================================== */}
-        <motion.div
+        <Motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
@@ -116,72 +92,16 @@ export default function Projects() {
 
           {/* Description */}
           <p className="mx-auto mt-5 max-w-2xl text-sm leading-7 text-slate-400 sm:text-base">
-            A collection of landing pages, frontend websites, and full-stack
-            applications built with modern technologies, responsive design,
-            clean architecture, and real-world user experiences.
+            A selection of thoughtful digital experiences, built with modern
+            technologies and designed for real-world use.
           </p>
-        </motion.div>
-
-        {/* =====================================================
-            CATEGORY FILTER
-        ====================================================== */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="mb-12 flex justify-center"
-        >
-          <div className="flex w-full max-w-5xl flex-wrap justify-center gap-2 rounded-2xl border border-white/10 bg-white/[0.025] p-2 shadow-2xl shadow-black/20 backdrop-blur-xl">
-            {categories.map((category) => {
-              const isActive = activeCategory === category
-
-              return (
-                <button
-                  key={category}
-                  type="button"
-                  onClick={() => handleCategoryChange(category)}
-                  className={`rounded-xl px-4 py-2.5 text-sm font-medium transition-all duration-300 sm:px-5 ${
-                    isActive
-                      ? 'bg-white text-slate-950 shadow-lg shadow-white/10'
-                      : 'text-slate-400 hover:bg-white/[0.06] hover:text-white'
-                  }`}
-                >
-                  {category}
-                </button>
-              )
-            })}
-          </div>
-        </motion.div>
-
-        {/* =====================================================
-            CATEGORY TITLE
-        ====================================================== */}
-        <div className="mb-7 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-          <div>
-            <h3 className="flex items-center gap-2 text-xl font-bold text-white sm:text-2xl">
-              <Layers3 size={22} className="text-emerald-400" />
-
-              {activeCategory}
-            </h3>
-
-            <p className="mt-1 text-sm text-slate-500">
-              {filteredProjects.length}{' '}
-              {filteredProjects.length === 1 ? 'project' : 'projects'} available
-            </p>
-          </div>
-
-          <div className="hidden items-center gap-2 text-xs font-medium text-slate-500 sm:flex">
-            <span className="h-2 w-2 rounded-full bg-emerald-400 shadow-lg shadow-emerald-400/50" />
-            Modern & Responsive
-          </div>
-        </div>
+        </Motion.div>
 
         {/* =====================================================
             PROJECT GRID
         ====================================================== */}
         {visibleProjects.length > 0 ? (
-          <motion.div
+          <Motion.div
             layout
             className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3"
           >
@@ -190,7 +110,7 @@ export default function Projects() {
                 const isExpanded = expandedDescriptions[project.id]
 
                 return (
-                  <motion.article
+                  <Motion.article
                     layout
                     key={project.id ?? project.slug ?? project.title}
                     initial={{ opacity: 0, y: 35 }}
@@ -200,7 +120,7 @@ export default function Projects() {
                       duration: 0.5,
                       delay: Math.min(index * 0.07, 0.35),
                     }}
-                    className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-white/10 bg-white/[0.035] shadow-2xl shadow-black/20 backdrop-blur-xl transition-all duration-500 hover:-translate-y-1 hover:border-emerald-400/25 hover:bg-white/[0.055] hover:shadow-emerald-950/20"
+                    className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-white/10 bg-white/[0.035] shadow-2xl shadow-black/20 backdrop-blur-xl transition-all duration-500 hover:-translate-y-1 hover:border-emerald-400/25 hover:bg-white/5.5 hover:shadow-emerald-950/20"
                   >
                     {/* Card glow */}
                     <div className="pointer-events-none absolute -inset-px rounded-2xl bg-linear-to-br from-emerald-400/0 via-cyan-400/0 to-violet-500/0 opacity-0 blur-xl transition duration-500 group-hover:from-emerald-400/10 group-hover:via-cyan-400/5 group-hover:to-violet-500/10 group-hover:opacity-100" />
@@ -209,29 +129,31 @@ export default function Projects() {
                         IMAGE
                     ================================================== */}
                     <div className="relative z-10 overflow-hidden border-b border-white/10 bg-slate-950">
-                      <div className="aspect-[16/10] overflow-hidden">
-                        <img
-                          src={project.image}
-                          alt={`${project.title} project preview`}
-                          loading="lazy"
-                          className="h-full w-full object-cover transition duration-700 ease-out group-hover:scale-105"
-                        />
-                      </div>
+                      <div className="relative aspect-16/10 overflow-hidden">
+                        {project.image ? (
+                          <img
+                            src={project.image}
+                            alt={`${project.title} project preview`}
+                            loading="lazy"
+                            className="h-full w-full object-cover transition duration-700 ease-out group-hover:scale-105"
+                          />
+                        ) : (
+                          <div className="flex h-full items-center justify-center bg-[radial-gradient(ellipse_at_50%_0%,rgba(16,185,129,0.22),transparent_58%),linear-gradient(135deg,#0f172a,#020617)]">
+                            <div className="flex h-20 w-20 items-center justify-center rounded-3xl border border-white/10 bg-white/6 text-emerald-300 shadow-2xl shadow-emerald-950/40 transition duration-500 group-hover:scale-110 group-hover:border-emerald-300/30">
+                              <FileCode2 size={34} strokeWidth={1.5} />
+                            </div>
+                            <span className="absolute bottom-5 left-6 text-xs font-medium uppercase tracking-[0.25em] text-white/40">
+                              {project.title}
+                            </span>
+                          </div>
+                        )}
 
-                      {/* Image overlay */}
-                      <div className="absolute inset-0 bg-linear-to-t from-black/60 via-black/5 to-transparent opacity-60 transition duration-500 group-hover:opacity-80" />
-
-                      {/* Project type */}
-                      <div className="absolute left-4 top-4">
-                        <span className="inline-flex items-center gap-1.5 rounded-full border border-white/15 bg-black/50 px-3 py-1.5 text-xs font-semibold text-white backdrop-blur-xl">
-                          <FileCode2 size={13} className="text-emerald-400" />
-                          {project.type || 'Web Project'}
-                        </span>
+                        <div className="pointer-events-none absolute inset-0 bg-linear-to-t from-black/50 via-transparent to-transparent" />
                       </div>
 
                       {/* Featured */}
                       {project.featured && (
-                        <div className="absolute right-4 top-4">
+                        <div className="absolute right-4 top-4 z-10">
                           <span className="inline-flex items-center gap-1.5 rounded-full border border-emerald-400/20 bg-emerald-400/10 px-3 py-1.5 text-xs font-semibold text-emerald-300 backdrop-blur-xl">
                             <Sparkles size={13} />
                             Featured
@@ -250,17 +172,6 @@ export default function Projects() {
                         <h4 className="text-xl font-bold tracking-tight text-white transition-colors duration-300 group-hover:text-emerald-300">
                           {project.title}
                         </h4>
-
-                        <div className="mt-2 flex items-start gap-2 text-sm text-emerald-400/90">
-                          <Layers3
-                            size={16}
-                            className="mt-0.5 shrink-0"
-                          />
-
-                          <span className="leading-5">
-                            {project.category}
-                          </span>
-                        </div>
                       </div>
 
                       {/* Description */}
@@ -389,21 +300,21 @@ export default function Projects() {
                         )}
                       </div>
                     </div>
-                  </motion.article>
+                  </Motion.article>
                 )
               })}
             </AnimatePresence>
-          </motion.div>
+          </Motion.div>
         ) : (
           /* =====================================================
              EMPTY STATE
           ====================================================== */
-          <motion.div
+          <Motion.div
             initial={{ opacity: 0, scale: 0.98 }}
             animate={{ opacity: 1, scale: 1 }}
-            className="rounded-2xl border border-dashed border-white/10 bg-white/[0.025] px-6 py-16 text-center"
+            className="rounded-2xl border border-dashed border-white/10 bg-white/2.5 px-6 py-16 text-center"
           >
-            <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl border border-white/10 bg-white/[0.04] text-slate-500">
+            <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl border border-white/10 bg-white/4 text-slate-500">
               <Layers3 size={26} />
             </div>
 
@@ -412,16 +323,16 @@ export default function Projects() {
             </h3>
 
             <p className="mx-auto mt-2 max-w-md text-sm leading-6 text-slate-500">
-              There are currently no projects available in this category.
+              There are no projects to show right now.
             </p>
-          </motion.div>
+          </Motion.div>
         )}
 
         {/* =====================================================
             SHOW MORE / SHOW LESS
         ====================================================== */}
-        {filteredProjects.length > INITIAL_PROJECTS && (
-          <motion.div
+        {productData.length > INITIAL_PROJECTS && (
+          <Motion.div
             initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -450,13 +361,13 @@ export default function Projects() {
                 </>
               )}
             </button>
-          </motion.div>
+          </Motion.div>
         )}
 
         {/* =====================================================
             BOTTOM CTA
         ====================================================== */}
-        <motion.div
+        <Motion.div
           initial={{ opacity: 0, y: 25 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -476,13 +387,12 @@ export default function Projects() {
             </h3>
 
             <p className="mx-auto mt-3 max-w-xl text-sm leading-6 text-slate-400">
-              I enjoy building responsive interfaces and practical web
-              applications using modern frontend and full-stack technologies.
+              I enjoy creating responsive interfaces and practical applications
+              that make everyday tasks easier.
             </p>
           </div>
-        </motion.div>
+        </Motion.div>
       </div>
     </section>
   )
 }
-
