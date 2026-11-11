@@ -1,6 +1,36 @@
 const productData = [
-  {
+
+{
   id: 1,
+  title: 'SmileCraft - Dental Clinic',
+  slug: 'smilecraft-dental-clinic',
+  category: 'Full-Stack WebApp/Website Projects',
+  type: 'Full-Stack Dental Clinic Management & Appointment Booking Web Application',
+  description:
+    'A modern dental clinic website designed to simplify healthcare services and online appointment management. SmileCraft provides patients with an intuitive platform to explore dental services, discover experienced doctors, and book appointments online. The application focuses on improving the patient experience through an easy-to-use booking system, responsive user interface, and organized clinic management. Built with a modern web architecture, it aims to streamline appointment scheduling, reduce manual booking processes, and deliver accessible dental care information.',
+  image: 'https://i.ibb.co.com/67h45T0y/smile-craft.png',
+  liveUrl: 'https://smile-craft-medical-omega.vercel.app/',
+  githubUrl: 'https://github.com/kyachingprue/my-medical-project',
+  technologies: [
+    'Next.js',
+    'TypeScript',
+    'React',
+    'Tailwind CSS',
+    'PostgreSQL',
+    'Neon Database',
+    'Authentication',
+    'REST API',
+    'Appointment Booking System',
+    'Doctor Management',
+    'Responsive Web Design',
+    'Vercel'
+  ],
+  featured: true,
+  year: 2026
+},
+
+  {
+  id: 2,
   title: 'Nova AI',
   slug: 'nova-ai',
   category: 'Full-Stack WebApp/Website Projects',
@@ -28,7 +58,7 @@ const productData = [
   year: 2026
 },
   {
-  id: 2,
+  id: 3,
   title: 'Coding Campus',
   slug: 'coding-campus',
   category: 'Full-Stack WebApp/Website Projects',
@@ -55,7 +85,7 @@ const productData = [
   year: 2025
 },
   {
-    id: 3,
+    id: 4,
     title: 'GreenBasket',
     slug: 'greenbasket',
     category: 'Full-Stack WebApp/Website Projects',
@@ -78,7 +108,7 @@ const productData = [
     year: 2025
   },
   {
-  id: 4,
+  id: 5,
   title: 'Avenza Shopping',
   slug: 'avenza-shopping',
   category: 'Full-Stack WebApp/Website Projects',
@@ -108,7 +138,7 @@ const productData = [
   year: 2026
 },
   {
-    id: 5,
+    id: 6,
     title: 'Freelance Job Website',
     slug: 'freelance-job-website',
     category: 'Full-Stack WebApp/Website Projects',
@@ -132,7 +162,7 @@ const productData = [
   },
 
    {
-    id: 6,
+    id: 7,
     title: 'GoExplore Travel Studio',
     slug: 'goexplore-travel-studio',
     category: 'Full-Stack WebApp/Website Projects',
@@ -156,7 +186,7 @@ const productData = [
   },
 
    {
-  id: 7,
+  id: 8,
   title: 'MiniBook',
   slug: 'mini-book',
   category: 'Full-Stack WebApp/Website Projects',
@@ -184,7 +214,7 @@ const productData = [
   },
 
  {
-    id: 8,
+    id: 9,
     title: 'AI Document Analysis',
     slug: 'ai-document-analysis',
     category: 'Full-Stack WebApp/Website Projects',
@@ -208,7 +238,7 @@ const productData = [
   },
 
   {
-    id: 9,
+    id: 10,
     title: 'Antixor Staffing',
     slug: 'antixor-staffing',
     category: 'Frontend Website Projects',
@@ -230,7 +260,7 @@ const productData = [
   },
 
   {
-    id: 10,
+    id: 11,
     title: 'Nexora AI Platform',
     slug: 'nexora-ai-platform',
     category: 'Frontend Website Projects',
@@ -253,7 +283,7 @@ const productData = [
   },
 
   {
-    id: 11,
+    id: 12,
     title: 'Flights & Travel',
     slug: 'flights-travel',
     category: 'Frontend Website Projects',
@@ -276,7 +306,7 @@ const productData = [
   },
 
   {
-    id: 12,
+    id: 13,
     title: 'Real Estate Home Service',
     slug: 'real-estate-home-service',
     category: 'Frontend Website Projects',
@@ -299,7 +329,7 @@ const productData = [
   },
 
   {
-    id:13,
+    id:14,
     title: 'AetherAI',
     slug: 'aetherai',
     category: 'Full-Stack WebApp/Website Projects',
